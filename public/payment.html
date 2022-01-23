@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/53cdcb7507a23013519313393248b9bd?family=BrandonTextWeb-Bold" rel="stylesheet" type="text/css"/>
+    <link rel = "icon" href ="https://static.cure.fit/assets/images/favicon-modified.png" type = "image/x-icon">
+    <title>Payment Page</title>
+    <style>
+        #mainBody{
+            position: relative;
+        }
+        #paymentDiv{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position:absolute;
+            top: 0;
+        }
+        #payment{ 
+            overflow-y: initial;
+            overflow-x: hidden;
+            width: 450px;
+            height: 90vh;
+            margin: auto;
+            margin-top: 2%;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            z-index: 5;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgb(0 0 0 / 50%) 0px 5px 15px;
+            border-radius: 15px;
+        }
+         #paymentHeadline{
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            position: relative;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+         }
+         #closePayment{
+              position: absolute;
+              right: 15px;
+              padding:5px;
+              top: 20%;
+         }
+         #paymentmainBody{
+            padding: 20px;
+            color: rgb(0, 0, 0);
+             overflow: scroll;
+         }
+         #totalDiv{
+            background-color: rgb(221, 221, 253);
+            padding: 2rem;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+         }
+         #total{
+             float: right;
+         }
+         .paymentbody{
+            min-height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 10px 0px;
+            -webkit-box-align: center;
+            align-items: center;
+            cursor: pointer;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 1.19;
+            color: rgb(88, 88, 88);
+            padding-bottom: 0.2rem;
+            border-radius: 10px;
+         }
+         .paymentbody:hover{
+            transition: background-color 0.3s ease-in-out 0s;
+            box-shadow: rgba(0, 0, 0, 0.219) 0px 4px 10px 0px;
+         }
+         .payment-image{
+            width: 50px;
+            margin-right: 2rem;
+            margin-left: 1rem;
+         }
+        
+    </style>
+</head>
+<body>
+    <div id="mainBody"> 
+         <button id="checkout">CheckOut</button>
+   
+
+          <div id="paymentDiv">
+              <div id="payment">
+                    <div id="paymentHeadline">
+                        <div>Payment Option</div>
+                        <div id="closePayment">
+                            <img src="https://static.cure.fit/assets/images/modal-close.svg">
+                        </div>
+                   </div>
+                   <div id="paymentmainBody">
+                        <div id="totalDiv">
+                            <span>Total</span><span id="total">$ 1000</span>
+                        </div>
+                    
+                        <div id="paytm" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/paytm_v1.svg">
+                            <div>Paytm</div>
+                        </div>
+                        <div id="creditCard" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/card-pay.svg">
+                            <div>Credit / Debit Card</div>
+                        </div>
+                        <div id="upi" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/upi-payment.svg">
+                            <div>UPI</div>
+                        </div>
+                        <div id="payon" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/cod.svg">
+                            <div>Pay on Delivery</div>
+                        </div>
+                        <div id="phone" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/phonePe.svg">
+                            <div>Phone/BHIM UPI</div>
+                        </div>
+                        <div id="netbanking" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/net-banking.svg">
+                            <div>Net Banking</div>
+                        </div>
+                        <div id="amazonpay" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/amazon-pay-short.png">
+                            <div>Amazon Pay</div>
+                        </div>
+                        <div id="wallet" class="paymentbody"> 
+                            <img class="payment-image" src="https://static.cure.fit/assets/images/wallets.svg">
+                            <div>Wallet</div>
+                        </div>
+                   </div>
+              </div>
+          </div>
+ 
+    </div>
+</body>
+<script>
+    var checkout = document.getElementById("checkout")
+    checkout.addEventListener("click",function(){
+         var paymentDiv = document.getElementById("paymentDiv")
+         paymentDiv.style.display = "block"
+    })
+    var closePayment = document.getElementById("closePayment")
+    closePayment.addEventListener("click",function(){
+        var closePayment = document.getElementById("closePayment")
+        paymentDiv.style.display = "none"
+    })
+</script>
+</html>

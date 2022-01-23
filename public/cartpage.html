@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CART PAGE</title>
+</head>
+<style>
+    /* <---------Topleft DropDown-----------> */
+    body {
+        margin: 0;
+        position: relative;
+    }
+
+   /* <-------------------------------- Login Arrow css -------------------------------------> */
+   #logindata {
+            width: 200px;
+            /* height: 300px; */
+            background-color: #FFFFFF;
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            flex-wrap: wrap;
+             justify-content:space-between;
+            right: 0;
+            top:100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #profile{
+            width:40px;
+            height:40px;
+        }
+        .imgall {
+            width: 50px;
+            height: 25px;
+            padding-left: 10px;
+            
+        }
+
+        #list a{
+            color: black;
+            text-decoration: none;
+            /* margin-left: 12px; */
+            font-size: 13px;
+        }
+        #list {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            margin: 0px 10px;
+            cursor: pointer;
+            padding: 5px 0px;
+        }
+         #list:hover{
+            transition: background-color 0.3s ease-in-out 0s;
+            box-shadow: rgba(0, 0, 0, 0.219) 0px 4px 10px 0px;
+ 
+        }
+/* <-----------------NavBarStyle---------------------> */
+#navbar {
+    width: 100%;
+    height: 64px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 15%);
+    display: flex;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#spet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+#innerNavbar {
+    width: 97%;
+    margin: auto;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo { 
+    width: 10%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    /* border: 2px solid orange; */
+}
+
+.logo:hover {
+    color: rgb(163, 156, 156);
+}
+
+.diff-pages {
+    width: 40%;   
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   
+  
+    /* border: 1px solid green; */
+    margin-bottom: 0px;
+    margin-top: 0px;
+   
+}
+
+#navbar ul li {
+    height: 100%;
+    list-style: none;
+}
+#navbar ul li a img {
+    width: 25px;
+    height: 25px;
+}
+
+#navbar li a p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: "BrandonTextWeb-Medium";
+}
+#eatSubpages{
+    display: flex;
+    justify-content:space-between;
+    justify-content: center;
+    align-items: center;
+    
+}
+#eatSubpages ul li a{
+    margin-left: 60px;
+    margin-right: 40px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.25;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+}
+ #order> a:nth-child(1){
+    color: rgb(252, 46, 113);
+}
+.user-details {
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.blue-dot {
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: rgb(15, 209, 255);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.cityName {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    max-width: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1em;
+    height: 1em;
+    text-align: left;
+    white-space: nowrap;
+}
+.location {
+    margin-right: 20px;
+}
+
+.logged-out {
+    display: flex;
+    padding: 0 0.5rem;
+    padding-top: 3px;
+}
+
+.logged-out img {
+    width: 16px;
+    height: 16px;
+  
+    margin-right: 0.5rem;
+}
+
+.logged-out .login-text {
+    color: black;
+    font-size: 14px;
+  
+}
+
+
+.cart img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+     /* margin-left: 100%; */
+      /* justify-content: right; */
+}
+/* <---------Topleft DropDown-----------> */
+
+.headerDropDown{
+    display:none;
+    position: absolute;
+     width:17%;
+  /*    height:230px; */
+    border:1px solid black;
+    /* display:flex; */
+    flex-flow:row wrap;
+    justify-content:space-between;
+    padding: 3px;
+      background: rgb(255, 255, 255);
+  /*     color: rgb(255, 255, 255); */
+      text-align: center;
+      /* font-size: 16px; */
+      border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0) 0px 0px 30px -16px;    left: 3%;
+      top: 80%;
+      z-index: 9999;
+  }
+  .headerDropDown>.dropDownElem{
+        padding: 20px;
+    /* width:30%; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  /*     width: 100%; */
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+  }
+  .headerDropDown>.dropDownElem:nth-child(6){
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(255, 49, 109);
+  }
+  .dropDownElem >div>img{
+    width:23px;
+    height:23px;
+  }
+  #dropdown-arrow{
+      padding:5px;
+      width: 20px;
+  }
+
+    #divFlexN {
+        /* width: 25%; */
+        display: flex;
+        overflow: scroll;
+        overflow-y: hidden;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+
+    #disDivCon {
+        display: flex;
+    }
+
+    #divspi {
+        width: 100%;
+        background-color: white;
+    }
+
+    #quant {
+        border: 2px solid rgb(255, 78, 116);
+        width: 90px;
+        margin-top: 10px;
+        height: 30px;
+        border-radius: 30px;
+        margin-left: 20px;
+        font-size: 25px;
+        display: flex;
+    }
+
+    #imgcART {
+        width: 120px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #countshow {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 3px;
+    }
+
+    hr {
+        height: 1px;
+        background-color: lightgray;
+        width: 85%;
+    }
+
+    #scrollN {
+        max-height: 400px;
+        overflow: scroll;
+        margin-top: -10px;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    #chiDiv {
+        position: absolute;
+        left: 0;
+        z-index: 99000;
+        width: 30%;
+        margin-left: 8%;
+    }
+
+    #deleteProd {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    /* final amount starts here */
+    #finalAmt {
+        margin-left: 50%;
+    }
+
+    #nikFlex {
+        display: flex;
+    }
+
+    #totalAmt {
+        margin-left: 55%;
+    }
+
+    #totalDisc {
+        margin-left: 54%;
+    }
+
+    #finalTotal {
+        font-size: 20px;
+        font-weight: bolder;
+        margin-left: 47.5%;
+    }
+
+    #selectAdd {
+        border-radius: 31px;
+        background-image: linear-gradient(103deg, #f74530, #ff2e73);
+        padding: 18px 50px;
+        border: 0;
+        color: #fff;
+        margin-left: 55%;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    #TOT {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        /* color: lightgray; */
+    }
+
+    #DIS {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #PAY {
+        font-family: BrandonTextWeb-Bold, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.67;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    #checkOut {
+        font-family: BrandonTextWeb-Bold, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif !important;
+        font-size: 18px;
+        padding-bottom: 0.5rem;
+        color: #000;
+        font-weight: bolder;
+    }
+
+    #pprod {
+        max-height: 36px;
+        font-size: 15px;
+        line-height: 1.2;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 7px 4px;
+        text-align: left;
+        color: #9b9b9b;
+    }
+
+    #psize {
+        max-height: 36px;
+        font-size: 15px;
+        line-height: 1.2;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 7px 4px;
+        text-align: left;
+        color: #9b9b9b;
+    }
+/* <----------------Payment PopUp--------------------> */
+        #paymentDiv{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.692);
+            position:absolute;
+            top: 0;
+            z-index: 999999999999;
+        }
+        #payment{ 
+            overflow-y: initial;
+            overflow-x: hidden;
+            width: 450px;
+            height: 90vh;
+            margin: auto;
+            margin-top: 2%;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            z-index: 5;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgb(0 0 0 / 50%) 0px 5px 15px;
+            border-radius: 15px;
+        }
+         #paymentHeadline{
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            position: relative;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+         }
+         #closePayment{
+              position: absolute;
+              right: 15px;
+              padding:5px;
+              top: 20%;
+         }
+         #paymentmainBody{
+            padding: 20px;
+            color: rgb(0, 0, 0);
+             overflow: scroll;
+         }
+         #totalDiv{
+            background-color: rgb(221, 221, 253);
+            padding: 2rem;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+         }
+         #total{
+             float: right;
+         }
+         .paymentbody{
+            min-height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 10px 0px;
+            -webkit-box-align: center;
+            align-items: center;
+            cursor: pointer;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 1.19;
+            color: rgb(88, 88, 88);
+            padding-bottom: 0.2rem;
+            border-radius: 10px;
+         }
+         .paymentbody:hover{
+            transition: background-color 0.3s ease-in-out 0s;
+            box-shadow: rgba(0, 0, 0, 0.219) 0px 4px 10px 0px;
+         }
+         .payment-image{
+            width: 50px;
+            margin-right: 2rem;
+            margin-left: 1rem;
+         }   
+         #paymenttotal{
+            float:right;
+         }
+         #payonPopupBd{
+             display:none;
+                  width: 100%;
+                  height:100vh;
+                  position:absolute;
+                  background-color: rgba(0, 0, 0, 0.349);
+                  z-index: 99999999999999999;
+                  top:0;
+         }
+         #payonPopup{
+             width:300px;
+             height:150px;
+             background-color: white;
+             margin: auto;
+             display: flex;
+             flex-flow:column wrap;
+             align-items: space-between;
+             justify-content:space-between;
+             position: relative;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
+            border-radius:10px; 
+            margin-top: 35vh;
+        }
+         #payonBtnbody{
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+             border-top: 1px solid black;
+         }
+         #payonBtnbody>div{
+            width:50%;
+             margin-top: 10px;
+         }
+         #payonBtnbody>div:nth-child(1){
+             border-right: 1px solid black; 
+             
+         }
+
+         .modal-confirm {		
+	color: #636363;
+	width: 325px;
+	font-size: 14px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	    background-image: linear-gradient(
+103deg,#f74530,#ff2e73);
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm.modal-dialog {
+	margin-top: 80px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	    background-image: linear-gradient(
+103deg,#f74530,#ff2e73);
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+	    background-image: linear-gradient(
+103deg,#f74530,#ff2e73);
+	outline: none;
+}
+#myModal{
+    z-index: 9999999999999999999999;
+}
+ @media screen and (min-width :0px) and (max-width : 480px){
+    #finalAmt{
+        border: 10px solid black;
+        margin-left: 0px;
+        margin-top: 400px;
+    }
+    
+    #chiDiv {
+        position: absolute;
+        left: 0;
+        z-index: 99000;
+        width: 100%;
+        margin-left: 0px;
+    }
+     #TOT {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: -50px;
+        /* color: lightgray; */
+    }
+        #DIS {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+         margin-left: -50px;
+    }
+       #PAY {
+        font-family: BrandonTextWeb-Bold, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.67;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #000;
+         margin-left: -50px;
+    }
+    #selectAdd {
+        border-radius: 30px; 
+        background-image: linear-gradient(103deg, #f74530, #ff2e73);
+         padding: 18px 50px;
+        border: 0;
+        color: #fff;
+        margin-left: 25%;
+        margin-top: 20px;
+        cursor: pointer;
+        width: 50%;
+    }
+ }
+  @media screen and (min-width :481px) and (max-width : 900px){
+    #finalAmt{
+        border: 10px solid black;
+        margin-left: 0px;
+        margin-top: 400px;
+    }
+    
+    #chiDiv {
+        position: absolute;
+        left: 0;
+        z-index: 99000;
+        width: 100%;
+        margin-left: 0px;
+    }
+     #TOT {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: -50px;
+        /* color: lightgray; */
+    }
+        #DIS {
+        opacity: .87;
+        font-family: BrandonTextWeb-Regular, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+         margin-left: -50px;
+    }
+       #PAY {
+        font-family: BrandonTextWeb-Bold, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.67;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #000;
+         margin-left: -50px;
+    }
+    #selectAdd {
+        border-radius: 30px; 
+        background-image: linear-gradient(103deg, #f74530, #ff2e73);
+         padding: 18px 50px;
+        border: 0;
+        color: #fff;
+        margin-left: 25%;
+        margin-top: 20px;
+        cursor: pointer;
+        width: 50%;
+    }
+    #disDiv > div > img {
+        width: 10%;
+    }
+ }
+
+     /* <------------SmallScreen NAvbar----------------> */
+        #hamburgericon{
+    padding:10px;
+}
+#hamburgericon>div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    z-index: 1;
+}
+#smallScreenNav{
+    display: none;
+    position:sticky;
+    transition: all 1s ease 1s;
+}
+#dropdownNav{
+    display: none;
+    display:flex;
+    flex-direction: column;
+    width: 50vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(34, 34, 34);
+    padding-top: 30px;
+     max-width: 350px;
+     transition: all 1s ease 1s;
+}
+#cross>.fa-times{
+    color:white;
+    font-size: 38px;
+    position: absolute;
+    top:20px;
+    right: 30px;
+    
+}
+#cultlogodis>img{
+    width: 100px;
+    margin-bottom: 30px;
+    padding-left: 3px;
+}
+#navPages{
+    display:flex;
+    flex-direction:column;
+    color: white;
+
+} 
+#navPages>div{
+    width:100%;
+    /* text-align:center; */
+    padding: 20px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* border-top: 1px solid white; */
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+#navPages>div>a{
+    text-decoration: none;
+    color: white;
+}
+#downLogin{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    color: white;
+    
+}
+#downLogin>div{
+    width:100%;
+    text-transform: none;
+    /* padding: 20px 20px 20px 0px; */
+    font-size: 15px;
+    padding: 15px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    /* font-weight: bold; */
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* /* max-width: 350px; */
+}
+  /* <-----------MediaQueriesNavbar------------> */
+@media screen and (max-width:720px){
+    #innerNavbar{
+      width: 50%;
+      justify-content:center;
+      align-items:center;
+      margin-left: auto;
+    }
+    #innerNavbar>#logo{
+        /* justify-content:center; */
+    }
+    #location{
+        /* width: 30vw; */
+        margin-right:0px;
+       margin-left: 100%;
+    }
+    #spet,#order,#profile,#spet,#eatSubpages,#logged-out,#blue-dot,#cartNik,#cultsportNI,#location{
+        display:none;
+    }
+    #footerd4 img{
+        width:5%;
+    }
+    #eatheader{
+        width:80%;
+    }
+    #smallScreenNav{
+        display: block;
+    }
+  }
+</style>
+
+<body>
+    <!------NavDropDown top left--------->
+    <div id="navbar">
+        <!-----Navbar----------->
+        <div id="smallScreenNav">
+            <div id="hamburgericon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="dropdownNav">
+                <div id="cultlogodis">
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man-white.svg" alt="user-image" class=" style-prefix-2jfr04 efaomd31" loading="lazy" width="40" height="45.45454545454545">
+                </div>
+                <div id="cross">
+                    <i class="fas fa-times"></i>
+                </div>
+                 <div id="navPages">
+                       <div><a href="/index.html">Home</a></div>
+                       <div><a href="/cultpage.html">CULT</a></div>
+                       <div><a href="/live.html">LIVE</a></div>
+                       <div><a href="/care.html">CARE</a></div>
+                       <div><a href="/mind.html">MIND</a></div>
+                       <div><a href="/storepage.html">STORE</a></div>
+                       <div><a href="/eatordernow.html">EAT</a></div>
+                      
+                 </div>
+                 <div id="downLogin">
+                    <div id="signin">SignIn</div>
+                    <div >Cart</div>
+                    <div>LogOut</div>
+               </div>
+            </div>
+          </div>
+        <div class="headerDropDown" id="headDropDown">
+            <div class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/cult-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CULT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/Livefit.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    LIVE
+                </div>
+            </div>
+            <div onclick="window.location.href='./EAT/eatordernow.html'" class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/eat-hover-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    EAT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/mind-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    MIND
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/carefit-blk.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CARE
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/store-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    STORE
+                </div>
+            </div>
+        </div>
+        <div id="innerNavbar">
+            <div id="logo" class="logo">
+                <a href="logout.html">
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="cult fit logo">
+                </a>
+                <div id="spet">
+
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/store_fit.svg"
+                        alt="eat" class=" css-130q1oe-ImageElement efaomd31" loading="lazy" width="66.66"
+                        height="19.999999999999996">
+                    <img id="dropdown-arrow" class="dropdownarrow"
+                        src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="Expand menu"
+                        style="transform: rotate(180deg); min-height: 15px; min-width: 15px;">
+                </div>
+            </div>
+            <div id="user-details" class="user-details">
+                <div id="location" class="location">
+
+                    <div id="blue-dot" class="blue-dot"></div>
+                    <div id="cityName" class="cityName">Bangalore</div>
+                </div>
+                <div id="profile">
+                    <img src="https://profile-pictures-prod.s3.amazonaws.com/5491b50b-b284-490f-a55d-db97431b1e32" style="max-width:100%;max-height:90%">
+                </div>
+                <div id="logged-out" class="logged-out">
+                    <div>
+                        <img id="image11" src="https://cdn-icons-png.flaticon.com/512/25/25623.png" />
+                      </div>
+
+                     <div id="logindata">
+        
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/profile-icon.svg" />
+                              <a class="allat" >Profile</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/cart-black.svg" />
+                              <a class="allat" >Orders</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/health-profile-black.svg" />
+                              <a class="allat" >Medical Records</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/combined-shape-black.svg" />
+                              <a class="allat" >Active Packs</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/coupon-black.svg" />
+                              <a class="allat" >Redeem Vouchers</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/settings-black.svg" />
+                              <a class="allat" >Account</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/support-black.svg" />
+                              <a class="allat" >Support</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/logout-black.svg" />
+                              <a class="allat" href="">Logout</a>
+                          </div>
+                  </div>
+                </div>
+                <div id="cart" class="cart">
+                    <img id="cartNik" src="https://static.cure.fit/assets/images/cart-image.svg" alt="cart logo">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div>
+        <div id="cartFinal">
+            <div style="border: 1px solid white;" id="previewCart">
+                <div style="border: 1px solid white;" id="chiDiv"></div>
+            </div>
+            <div style="border: 1px solid white;" id="finalAmt">
+                <div id="nikFlex">
+                    <div style="margin-top: 10px;">
+                        <img src="https://static.cure.fit/assets/images/locationPink.svg" alt="">
+                    </div>
+                    <div style="margin-left: 5%;">
+                        <p
+                            style="font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;">
+                            <input style="padding:10px; width:170%; " type="text" placeholder="Enter Your Address"></p>
+                    </div>
+                    <div style="margin:auto;">
+                        <p style="color:rgb(255,78,116);;">Add/Modify</p>
+                    </div>
+                </div>
+                <hr style="margin-right: 105px;margin-top: 2px;">
+                <div id="TOT" style="margin-top: 40px;">
+                    <span style="margin-left: 55px;">Total Price</span>
+                    <span id="totalAmt"></span>
+                </div>
+                <div id="DIS" style="margin-top: 15px;">
+                    <span style="margin-left: 53px;">(-) Discount</span>
+                    <span id="totalDisc"></span>
+                </div>
+                <div id="PAY" style="margin-top: 19px;">
+                    <span style="margin-left: 55px;">Total Payable</span>
+                    <span id="finalTotal"></span>
+                </div>
+                <button id="selectAdd">Check Out</button>
+            </div>
+
+        </div>
+    </div>
+         <div id="paymentDiv">
+             <div id="payment">
+                   <div id="paymentHeadline">
+                       <div>Payment Option</div>
+                       <div id="closePayment">
+                           <img src="https://static.cure.fit/assets/images/modal-close.svg">
+                       </div>
+                  </div>
+                  <div id="paymentmainBody">
+                       <div id="totalDiv">
+                           <span>Total</span><span id="paymenttotal">$ 1000</span>
+                       </div>
+                   
+                       <div id="paytm" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/paytm_v1.svg">
+                           <div>Paytm</div>
+                       </div>
+                       <div id="creditCard" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/card-pay.svg">
+                           <div>Credit / Debit Card</div>
+                       </div>
+                       <div id="upi" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/upi-payment.svg">
+                           <div>UPI</div>
+                       </div>
+                       <div id="payon" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/cod.svg">
+                           <div>Pay on Delivery</div>
+                       </div>
+                       <div id="phone" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/phonePe.svg">
+                           <div>Phone/BHIM UPI</div>
+                       </div>
+                       <div id="netbanking" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/net-banking.svg">
+                           <div>Net Banking</div>
+                       </div>
+                       <div id="amazonpay" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/amazon-pay-short.png">
+                           <div>Amazon Pay</div>
+                       </div>
+                       <div id="wallet" class="paymentbody"> 
+                           <img class="payment-image" src="https://static.cure.fit/assets/images/wallets.svg">
+                           <div>Wallet</div>
+                       </div>
+                  </div>
+             </div>
+         </div>
+
+   </div>
+   <div id="payonPopupBd">
+         <div id="payonPopup">
+               <div>Cash on Delivery!</div>
+               <div>Proceed to Confirm Order</div>
+               <div id="payonBtnbody">
+                   <div>No</div>
+                   <div id="paynowYes"><a href="#myModal" class="trigger-btn" data-toggle="modal">Proceed</a></div>
+               </div>
+         </div>
+   </div>
+   <!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>				
+				<h4 class="modal-title w-100">Awesome!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+			</div>
+			<div class="modal-footer">
+				<button onclick="location.href=`logout.html`" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    // <----------NavbarDropDown----------------->
+    var spet = document.getElementById("spet")
+    var toggle = false;
+    //  <-----------------Eatfit dropDown topleft------------------>
+    spet.addEventListener("click", function () {
+        var headDropDown = document.getElementById("headDropDown")
+        var droparrow = document.getElementById("dropdown-arrow")
+
+        if (toggle) {
+            headDropDown.style.display = "none"
+            toggle = false
+            droparrow.style.transform = "rotate(" + 180 + "deg)"
+        } else {
+            headDropDown.style.display = "flex"
+            toggle = true
+            droparrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+
+    })
+    // <------>
+
+    // var cartData = JSON.parse(localStorage.getItem('addnik')) || [];
+    // console.log(cartData);
+
+    // myFuncN(cartData)
+    var response = axios.get(`http://localhost:2345/cart/store`)
+                .then(function(response){
+                    storedata =response.data;
+                    myFuncN(storedata)
+                }).catch(function (error) {
+                    console.log(error);
+                })
+    function myFuncN(cartData) {
+        document.getElementById("chiDiv").innerHTML = null
+        let divN = document.createElement("div")
+        divN.setAttribute("id", "divspi");
+
+        let pN = document.createElement("p");
+        pN.textContent = "Cultgear Order Summary";
+        pN.id = "checkOut"
+
+        divN.append(pN)
+
+
+
+        // ==================================================
+
+
+
+        let scrollN = document.createElement("div")
+        scrollN.setAttribute("id", "scrollN")
+
+        divN.append(scrollN)
+        var Total = 0;
+        var quantity = 0;
+        cartData.forEach(function (nik, index) {
+            console.log(nik);
+            Total += (+nik.price);
+            quantity++;
+            let countcart = 1;
+
+
+
+
+            // ===================================
+
+            let disDiv = document.createElement("div");
+            disDiv.setAttribute("id", "disDiv")
+
+            // =====================
+
+            let disDivCon = document.createElement("div");
+            disDivCon.setAttribute("id", "disDivCon")
+            // =============================
+
+            let con1 = document.createElement("div");
+
+            let imgcART = document.createElement("img");
+            imgcART.src = nik.image1
+            imgcART.setAttribute("id", "imgcART")
+
+            con1.append(imgcART)
+
+
+            // =============================
+            let con2 = document.createElement("div");
+
+            let deleteProd = document.createElement("img")
+            deleteProd.id = "deleteProd"
+            deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
+            deleteProd.addEventListener("click", function (index) {
+                console.log(nik["_id"])
+                axios.delete(`http://localhost:2345/cart/store/${nik["_id"]}`)
+                .then(function(res){
+                    res = axios.get(`http://localhost:2345/cart/store`)
+                    .then(function (res) {
+                        storedata =res.data
+                        myFuncN(storedata,"store")
+                    }).catch(function (er){
+                            console.log(er)
+                    })
+                    console.log(res)
+                }).catch(function (error) {
+                    console.log(error);
+                })
+            })
+
+            let pprod = document.createElement("p");
+            pprod.textContent = nik.name
+            pprod.id = "pprod"
+
+
+            let psize = document.createElement("p");
+            psize.textContent = nik.color;
+            psize.id = "psize"
+
+            let collection = document.createElement("div")
+            collection.style.display = "flex"
+            collection.style.marginRight = "30px"
+
+
+
+            let pprice = document.createElement("p");
+            pprice.textContent = nik.price
+
+            let quant = document.createElement("div")
+            quant.setAttribute("id", "quant")
+
+            let minus = document.createElement("img")
+            minus.src = "https://static.cure.fit/assets/images/minus.svg"
+            minus.style.width = "15px";
+            minus.style.marginLeft = "10px"
+            minus.style.cursor = "pointer"
+            minus.addEventListener("click", countfunc)
+
+            function countfunc() {
+                if (countcart == 0) {
+                    return
+                }
+                else {
+                    countcart--
+                    Total -= (+nik.price);
+                    console.log(countcart);
+                    countshow.textContent = countcart
+                    let nik1 = document.getElementById("totalAmt")
+                    nik1.textContent = `₹ ${Total}`
+                    let nik2 = document.getElementById("totalDisc")
+                    nik2.textContent = `₹${Math.floor(Total * (30 / 100))}`;
+
+                    let nik3 = document.getElementById("finalTotal")
+                    nik3.textContent = ` ₹${Total - Math.floor(Total * (30 / 100))}`;
+
+                }
+
+            }
+
+            let countshow = document.createElement("p")
+            countshow.textContent = countcart
+            countshow.setAttribute("id", "countshow")
+
+
+            let plus = document.createElement("img")
+            plus.src = "https://static.cure.fit/assets/images/plus.svg";
+            plus.style.width = "15px"
+            plus.style.cursor = "pointer"
+            plus.addEventListener("click", countfunc2);
+
+
+            function countfunc2() {
+                console.log(countcart);
+                Total += (+nik.price);
+                countcart++
+                let nik1 = document.getElementById("totalAmt")
+                nik1.textContent = `₹ ${Total}`
+                let nik2 = document.getElementById("totalDisc")
+                nik2.textContent = `₹${Math.floor(Total * (30 / 100))}`;
+
+                let nik3 = document.getElementById("finalTotal")
+                nik3.textContent = ` ₹${Total - Math.floor(Total * (30 / 100))}`;
+
+
+
+                countshow.textContent = countcart
+
+            }
+
+            let hr = document.createElement("hr")
+
+            quant.append(minus, countshow, plus)
+
+            collection.append(pprice, quant)
+
+            con2.append(deleteProd, pprod, psize, collection)
+
+
+            disDivCon.append(con1, con2)
+
+            disDiv.append(disDivCon, hr)
+
+            scrollN.append(disDiv)
+
+
+            document.getElementById("chiDiv").append(divN)
+
+        });
+        nik1 = document.getElementById("totalAmt")
+        nik1.textContent = `₹ ${Total}`
+        nik2 = document.getElementById("totalDisc")
+        nik2.textContent = `₹${Math.floor(Total * (30 / 100))}`;
+
+        nik3 = document.getElementById("finalTotal")
+        nik3.textContent = ` ₹${Total - Math.floor(Total * (30 / 100))}`;
+
+
+
+                
+
+    }
+    
+    // <--------------RigthDropDown--------------->
+    var arrow = document.getElementById("image11")
+    arrow.addEventListener("click", showdata)
+    var toggle = false
+    function showdata() {
+
+        if (toggle) {
+            toggle = false
+            document.getElementById("logindata").style.display = "none";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        } else {
+            toggle = true
+            document.getElementById("logindata").style.display = "flex";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+    }
+
+    // <--------------PaymentScript---------------->
+    var checkout = document.getElementById("selectAdd")
+    checkout.addEventListener("click",function(){
+         var paymentDiv = document.getElementById("paymentDiv")
+         paymentDiv.style.display = "block"
+    })
+    var paymenttotal= document.getElementById("paymenttotal")
+    paymenttotal.innerHTML = `${document.getElementById("finalTotal").textContent}`
+    var closePayment = document.getElementById("closePayment")
+    closePayment.addEventListener("click",function(){
+        var closePayment = document.getElementById("closePayment")
+        paymentDiv.style.display = "none"
+    })
+
+    var payon = document.getElementById("payon")
+    payon.addEventListener("click",function(){
+        payonPopupBd.style.display ="block" 
+    }) 
+    let paytm = document.getElementById("paytm")
+    paytm.addEventListener("click",function(){
+        window.location.href="http://localhost:2345/paytm"
+    }) 
+    var hamburger = document.getElementById("hamburgericon")
+hamburger.addEventListener("click",()=>{
+    var dropNav = document.getElementById("dropdownNav")
+    dropNav.style.display="flex"
+    
+    console.log("clicking")
+})
+var cross = document.getElementById("cross")
+cross.addEventListener("click",()=>{
+    var dropNav = document.getElementById("dropdownNav")
+    dropNav.style.display="none"
+    
+    console.log("clicking")
+})
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

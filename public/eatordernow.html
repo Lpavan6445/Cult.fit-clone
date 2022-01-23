@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link href="//db.onlinewebfonts.com/c/53cdcb7507a23013519313393248b9bd?family=BrandonTextWeb-Bold" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="navFooterStyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel = "icon" href ="https://static.cure.fit/assets/images/favicon-modified.png" type = "image/x-icon">
+<title>Eat Order</title>
+<style>
+/* Center the loader */
+body{
+    font-family: BrandonTextWeb-Regular,Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+     position: relative;
+  }
+  
+/* <----------Loading---------> */
+
+#preloader{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
+#preloader>img{
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  /* padding:500px; */
+  top:  38vh;
+  left: 47%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  padding:20px;
+}
+#mainBody{
+   display:none;
+}
+/* <-------------eatHeader---------------> */
+#eatheader{
+  position: sticky;
+  top: 64px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    background-color:white;
+    margin-top: 60px;
+    /* z-index: 10; */
+}
+#eatheader>.eatHeaderLeftDropdown{
+    position: relative;
+    display: flex;
+    width: 120px;
+    height: 35px;
+    background-color:#dbe5f5;
+    padding:8px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 18px;
+}
+.eatHeaderLeftFilter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.headveg{
+    border: 1px solid rgb(178, 187, 199);
+    font-size: 12px;
+    padding: 4px 12px 3px;
+    border-radius: 4px;
+    color: rgb(178, 187, 199);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+.eatHeaderLeftFilter>#filter{
+    width: 80px;
+    margin-left: 30px;
+    display: flex;
+    vertical-align: top;
+    font-family: BrandonTextWeb-medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+.filterimg{
+    padding-right: 5px;
+}
+/* <-----------------EatHeaderBody----------------------> */
+#eatProdBody{
+  display: flex;
+   flex-direction: row;
+   width: 90%;
+   /* height: 700px; */
+   margin: auto;
+   /* border: 1px solid red; */
+} 
+nav{
+    width:23%;
+    /* border: 1px solid rgb(0, 0, 0); */
+ }
+ main{
+    width:100%;
+    /* border: 1px solid rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: col;
+    flex-wrap: wrap;
+    padding-left: 10px;
+ }
+ main>section{
+   width:100%;
+   /* border: 1px solid rgb(247, 0, 0); */
+   margin-left:auto;
+ }
+/* <------------> */
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  white-space: nowrap;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+   display: block;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+   font-size: 18px;
+    color: rgb(28, 29, 30);
+    margin: 25px 0px 0px 20px;
+}
+nav ul li a:hover{
+    
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(28, 29, 30);
+    margin: 25px 40% 0px 20px;
+    transition: font-size 0.4s;
+    font-size: 22px;
+    border-bottom: 1px solid rgb(255, 49, 109);
+}
+section > .header{
+     font-size: 24px;
+    color: rgb(0, 0, 0);
+    margin: 30px 10px 6px;
+}
+.secclass{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.secclass > #meal{
+  width: 30%;
+  height: 40%;
+  margin: 10px;
+  margin-bottom: 50px;
+  padding: 8px 8px;   /* border: 1px solid rgb(0, 0, 0); */
+}
+.secclass{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+}
+
+.secclass > #meal:hover{
+  border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 9%) 0px 7px 21px 3px;
+}
+#imgDiv{
+  width: 100%;
+ height: 40%;
+ overflow: hidden;
+ z-index: -5;
+}
+#mealImg{
+ width: 100%;
+ height: 100%;
+ border-radius: 4px;
+ z-index: -5;
+}
+
+#textDiv{
+  overflow: hidden;
+  margin: 18px 0px 0px 3px;
+  z-index: -5;
+}
+#mealBottom{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 0px 3px;
+}
+#addBtn{
+  justify-content: center;
+    width: 7vw;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #ff316d;
+    font-size: 16px;
+    font-family: BrandonTextWeb-Bold,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif!important;
+    border: 2px solid #d8d8d8;
+    transition: background-color .3s ease-in-out;
+    height: 32px;
+    padding: 3px 7px 2px;
+}
+/* Only stick if you can fit */
+@media (min-height:300px) {
+  nav ul {
+    position: sticky;
+    top: 125px;
+  }
+}
+
+.downmatter{
+    display: flex;
+    flex-direction: column;
+    /* padding: 40px 20px; */
+    width: 90%;
+    margin:auto;
+    margin-top: 40px;
+}
+.eatHealthy{
+  font-size: 80px;
+    color: rgb(110, 110, 110);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    vertical-align: bottom;
+}
+.stayfit{
+   font-size: 60px;
+    color: rgb(178, 178, 178);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    vertical-align: bottom;
+}
+#leftSectionDiv{
+  position:sticky;
+}
+/* <-------------Media Queries-----------------> */
+ @media screen and (min-width: 665px) and (max-width:887px){
+  .secclass > #meal{
+    width: 43%;
+  }
+  main>section{
+    margin-left:5%;
+  }
+  #addBtn{
+    width: 10vw;
+  }
+  #eatheader{
+    width: 98%;
+    margin-right:10px;
+  }
+  #eatProdBody{
+    width: 100%; 
+  }
+ }
+ @media screen and (min-width: 540px) and (max-width:664px){
+  .secclass > #meal{
+    width: 95%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    margin-bottom: 1%;
+    z-index: -5;
+  }
+  #imgDiv{
+    width:50%;
+  }
+  #mealBottom{
+    position:absolute;
+    z-index: -5;
+    right:5%;
+    bottom:10%;
+    align-items: center;
+    width:40%;
+    margin:0px;
+    font-size: 3vw;
+  }
+  #textDiv{
+    width:50%;
+    margin-left:5.2%;
+    font-size: 4vw;
+  }
+  #addBtn{
+    width: 13vw;
+    font-size: 3vw;
+  }
+  #eatheader{
+    width: 98%;
+    margin-right:10px;
+  }
+  #eatProdBody{
+    width: 100%;
+  }
+  nav ul li a:hover{
+    font-size: 18px;
+  }
+ }
+ @media screen and (max-width:539px){
+
+  #eatProdBody>nav{
+     display:none;
+     position:absolute;
+     z-index: 90px;
+  }
+  .secclass > #meal{
+    width: 95%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    margin-bottom: 1%;
+   
+  }
+  #imgDiv{
+    width:50%;
+  }
+  #mealBottom{
+    position:absolute;
+    z-index: -5;
+    right:5%;
+    bottom:10%;
+    align-items: center;
+    width:40%;
+    margin:0px;
+    font-size: 3vw;
+  }
+  #textDiv{
+    width:50%;
+    margin-left:5.2%;
+    font-size: 4vw;
+  }
+  #addBtn{
+    width: 13vw;
+    font-size: 3vw;
+
+  }
+  #eatheader{
+    width: 98%;
+    margin-right:10px;
+  }
+  #eatProdBody{
+    width: 100%;
+  }
+  #eatProdBody>#leftSectionDiv{
+    display:none;
+     background-color: #eeeeee;
+     width:45%;
+     z-index: 99990px;
+     position:absolute;
+  }
+  nav ul li a:hover {
+    font-size: 18px;
+  }
+  #mealBottom{
+    font-size: 4vw;
+  }
+  #textDiv{
+    width:50%;
+    margin-left:5.2%;
+    font-size: 5vw;
+  }
+  #addBtn{
+    width: 15vw;
+    height: 37px;
+    font-size: 4vw;
+  }
+ }
+</style>
+</head>
+
+<body  style="margin:0;">
+ <!-- <----------------LoadingAnimation----------------->
+  <div id="preloader"> 
+      <img src="https://static.cure.fit/assets/images/loader-v2.gif">
+  </div>
+  <!-- <------------------------------------------>
+
+  <!----------------------MainBody-------------------------> 
+  <div id="mainBody">
+  
+  
+    <!----------------Navar----------------> 
+    <div id="navbar">
+      
+     </div>
+     <div id="chiDiv"></div>
+    <!--===================topImageSlider=========================> -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/06532607-1b75-410e-a3e3-2f9ad593110e.jpeg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/82f4d442-533c-41d3-bb9f-1d371fb40801.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/fa9d18a1-4b20-4e47-8321-69673d593805.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+  <!--===================EatProdHeader=========================-->
+   <div id="eatProduct">
+    <div id="eatheader">
+          <div class="eatHeaderLeftDropdown">
+            <div>EAT NOW</div>
+            <div>
+              <img style="position:absolute; top:40%;right:13px; transform: rotate(90deg);" class="dropdown-image" src="https://static.cure.fit/assets/images/dropdown-icon.svg">
+            </div> 
+        </div>
+          <div class="eatHeaderLeftFilter">
+            <div class="headveg">
+                VEG
+            </div>
+            <div id="filter">
+                  <img class="filterimg"  src="https://static.cure.fit/assets/images/filter-black.svg">
+                <div >FILTERS</div>
+            </div>
+          </div>
+    </div>
+    <!----------------------EatProductsBody----------------------->
+     <div id="eatProdBody">
+       
+        <nav id="leftSectionDiv">
+          <ul>
+            <li><a href="#sec1">Bestsellers</a></li>
+            <li><a href="#sec2">Chicken</a></li>
+            <li><a href="#sec3">All-Day Breakfast</a></li>
+            <li><a href="#sec4">Fish</a></li>
+            <li><a href="#sec5">Burger</a></li>
+            <li><a href="#sec6">Bread & Rice</a></li>
+            <li><a href="#sec7">Indian Curries</a></li>
+            <li><a href="#sec8">Rolls & Pao</a></li>
+            <li><a href="#sec9">3 Layer Rice Bowls</a></li>
+            <li><a href="#sec10">Biryani & Kebab</a></li>       
+          </ul>
+        </nav>
+
+          <main>
+            <section id="sec1">
+              <div class="header">Bestsellers</div>
+               <div id="sec1Prod"  class="secclass">
+
+               </div>
+            </section>
+            <section id="sec2">
+              <div class="header">Header</div>
+              <div id="sec2Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec3">
+              <div class="header">Header</div>
+              <div id="sec3Prod" class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec4">
+              <div class="header">Header</div>
+              <div id="sec4Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec5">
+              <div class="header">Header</div>
+              <div id="sec5Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec6">
+              <div class="header">Header</div>
+              <div id="sec6Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec7">
+              <div class="header">Header</div>
+              <div id="sec7Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec8">
+              <div class="header">Header</div>
+              <div id="sec8Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec9">
+              <div class="header">Random</div>
+              <div id="sec9Prod"  class="secclass">
+          
+              </div>
+            </section>
+            <section id="sec10">
+              <div class="header">Biryani</div>
+              <div id="sec10Prod"  class="secclass">
+          
+              </div>
+            </section>
+          </main>
+          
+      </div>
+    </div>
+  <!-------------------------------------------> 
+  <div class="downmatter">
+    <div class="eatHealthy" font-size="80" color="#6e6e6e" >EAT HEALTHY</div>
+    <div class="stayfit" font-size="60" color="#b2b2b2" >STAY FIT</div>
+  </div>
+  <!-------------------------------- footer part ------------------------------------->
+    <div id="footer">
+     
+    </div>
+ </div>
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module">
+   
+  // <----------Loader------------->
+    var myVar;
+        window.addEventListener('load', (event) => {
+       myVar = setTimeout(showPage, 500);
+    });
+  
+    function showPage() {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("mainBody").style.display = "block";
+    }
+  //<--------------EatProductsMap----------------->
+    
+  import {getData,showProd} from "./showProd.js"
+  import {navbar,footer} from "./navFoot.js"
+
+  var nav = document.getElementById("navbar")
+    nav.innerHTML = navbar()
+    var foot = document.getElementById("footer")
+    foot.innerHTML = footer()
+       var spet = document.getElementById("spet")
+       var toggle = false;
+
+       var hamburger = document.getElementById("hamburgericon")
+    hamburger.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="flex"
+        
+        console.log("clicking")
+    })
+    var cross = document.getElementById("cross")
+    cross.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="none"
+        
+        console.log("clicking")
+    })
+    
+     //  <-----------------Eatfit  topleft------------------>
+       spet.addEventListener("click",function(){
+           var headDropDown = document.getElementById("headDropDown")
+           var droparrow = document.getElementById("dropdown-arrow")
+           
+           if(toggle){
+            headDropDown.style.display = "none"
+            toggle = false
+            droparrow.style.transform = "rotate("+180+"deg)"
+           }else{
+            headDropDown.style.display = "flex"
+            toggle = true
+            droparrow.style.transform = "rotate("+0+"deg)"
+           }
+          
+       })
+
+       getData("Bestseller","sec1Prod")   
+    getData("Chicken","sec2Prod")
+    getData("Breakfast","sec3Prod")
+    getData("Fish","sec4Prod")
+    getData("Burger","sec5Prod")
+    getData("Bread","sec6Prod")
+    getData("Indian","sec7Prod")
+    getData("Rolls","sec8Prod")
+    getData("Rice","sec9Prod")
+    getData("Biryani","sec10Prod")
+
+  // console.log(mealsData)
+ 
+//  <------------------ProductSmallScreen DropDown--------------------->
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      console.log("matched")
+      let dropdownImage = document.getElementsByClassName("eatHeaderLeftDropdown")
+    let clickEat = false
+    dropdownImage[0].addEventListener("click",function(){
+      console.log("clicking")
+      let leftSectionDiv = document.getElementById("leftSectionDiv")
+        if (clickEat == true) {
+          clickEat = false
+          leftSectionDiv.style=`display:none;
+                                  z-index: 30px;
+                                  `
+        }else {
+          clickEat = true
+          leftSectionDiv.style=`display:flex;
+                                  z-index: 30px;`
+        }
+      })
+    } 
+  }
+
+  var x = window.matchMedia("(max-width: 539px)")
+  myFunction(x)
+  x.addListener(myFunction) // Attach listener function on state changes
+
+  // <----------------------------->
+      // <---------------------Cart Page------------------------>
+        // var cartData=JSON.parse(localStorage.getItem('addnik'))||[];
+        // console.log(cartData);
+
+        let cart=document.getElementById("cartNik")
+var toggle = false;
+ cart.addEventListener("click",function (){
+  console.log("clicked")
+     if(toggle){
+         toggle = false;
+          chiDiv.style.display = "none"
+     }else{
+         toggle = true;
+         chiDiv.style.display = "block"
+
+         var response = axios.get(`http://localhost:2345/cart/store`)
+          .then(function(response){
+              storedata =response.data;
+              myFuncN(storedata,"store")
+          }).catch(function (error) {
+              console.log(error);
+          })
+       
+          var response = axios.get(`http://localhost:2345/cart/eat`)
+          .then(function(response){
+              eatdata =response.data
+          }).catch(function (error) {
+              console.log(error);
+          })
+     }
+   
+ });
+   
+</script>
+<script src="./cartpop.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
