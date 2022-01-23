@@ -181,7 +181,7 @@ app.post("/callback", (req, res) => {
              if(_result.STATUS == 'TXN_SUCCESS') {
                  res.send('payment sucess')
              }else {
-                 res.send('payment failed')
+                 res.sendFile(path.join(process.cwd()+'/public/cartpage.html'))
              }
            });
        });

@@ -417,3 +417,35 @@ buttonCart.textContent = `${quantity} items  •${Total}`;
  document.getElementById("chiDiv").append(buttonCart)
 
 }
+var hamburger = document.getElementById("hamburgericon")
+hamburger.addEventListener("click",()=>{
+    var dropNav = document.getElementById("dropdownNav")
+    dropNav.style.display="flex"
+    
+    console.log("clicking")
+})
+var cross = document.getElementById("cross")
+cross.addEventListener("click",()=>{
+    var dropNav = document.getElementById("dropdownNav")
+    dropNav.style.display="none"
+    
+    console.log("clicking")
+})
+var arrow = document.getElementById("image11")
+    arrow.addEventListener("click", showdata)
+    var toggle = false
+    function showdata() {
+
+        if (toggle) {
+            toggle = false
+            console.log("clicking")
+            document.getElementById("logindata").style.display = "none";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        } else {
+            toggle = true
+            console.log("clicking")
+            document.getElementById("logindata").style.display = "flex";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+    }
+    
