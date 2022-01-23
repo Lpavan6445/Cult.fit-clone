@@ -1610,3 +1610,770 @@ color: #9b9b9b;
 #cartNik{
    margin-top:5px;
 }
+/* media queries */
+
+@media screen and (max-width: 480px) {
+
+    .modallogin {
+        width: 100%;
+    }
+
+    .modallogin img {
+        width: 20%;
+    }
+    .modallogin .social-media-continue-icons {
+        width: 13%;
+    }
+    #div1 {
+      display: flex;
+      flex-direction: column;
+      /* margin: 30px 0 0px; */
+      padding: 0px 0 0px 0;
+      width: 80%;
+    }
+  
+    #div1 h2 {
+        font-size: 30px;
+    }
+  
+    .left-div {
+      font-size: 30px;
+      line-height: 1;
+    }
+  
+    .first-row-div {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 0.5%;
+    }
+  
+    .sub-text-div {
+      font-size: 15px;
+      color: #6E6D6D;
+      width: 90%;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.6;
+      margin: 0 0;
+    }
+  
+    .video-content {
+        min-height: auto;
+    }
+  
+    .div2 {
+        margin-top: 10%;
+    }
+  
+    #div2 img {
+        width: 63px;
+    }
+  
+  
+    .image-cult img{
+        width: 63px;
+        display: flex;
+        justify-content: space-between;
+        height: 34px;
+        
+        left: 0;
+    }
+  
+    .cult-div-text {
+      font-size: 15px;
+      color: #4c4c4c;
+      font-family: BrandonTextWeb-Medium,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    }
+  
+    #cult-page-text-after-explore {
+      font-size: 13px;
+     margin-top: 5%;
+     margin-bottom: 5%;
+    }
+  
+  
+  .inner-app-div {
+      display: flex;
+      flex-direction: column;
+  }
+  .left-app-div img {
+      width: 120px;
+      height: 49px;
+  }
+  
+  .app-store-icon-div {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .inner-app-div .left-app-div {
+      width: 90%;
+  }
+  
+  .left-app-div-text {
+      font-size: 30px;
+  }
+  
+  .left-app-div-lower-text {
+      font-size: 15px;
+  }
+  
+  .inner-app-div .right-mobile-icon-div {
+      display: none;
+  }
+  .bussiness-cult-inner-div img {
+      display: none;
+  }
+  
+  
+  .bussiness-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/business-cult-mweb.png");
+      background-size: 100% 100%;
+    
+  }
+  
+  .career-cult-inner-div img {
+      display: none;
+  }
+  
+  .career-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/career-mweb-cult.png");
+      background-size: 100% 100%;
+  }
+  
+  .arrow-image {
+    display: none;
+  }
+  
+  .cult-div-text span {
+    display: none;
+  }
+  
+  .be-better-text {
+      font-size: 50px;
+  }
+  
+  .everyday-text {
+      font-size: 40px;
+  }
+  
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+  
+  
+  @media screen and (min-width: 480px) and (max-width : 720px){
+    #div1 {
+      display: flex;
+      flex-direction: column;
+      /* margin: 30px 0 0px; */
+      padding: 0px 0 0px 0;
+      width: 80%;
+    }
+  
+    #div1 h2 {
+        font-size: 30px;
+    }
+  
+    .left-div {
+      font-size: 30px;
+      line-height: 1;
+    }
+  
+    .first-row-div {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 0.5%;
+    }
+  
+    .sub-text-div {
+      font-size: 15px;
+      color: #6E6D6D;
+      width: 90%;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.6;
+      margin: 0 0;
+    }
+  
+    .video-content {
+        min-height: auto;
+    }
+  
+    .div2 {
+        margin-top: 10%;
+    }
+  
+    #div2 img {
+        width: 63px;
+    }
+  
+    .image-cult img{
+        width: 63px;
+        display: flex;
+        justify-content: space-between;
+        height: 34px;
+        
+        left: 0;
+    }
+  
+    .cult-div-text {
+      font-size: 15px;
+      color: #4c4c4c;
+      font-family: BrandonTextWeb-Medium,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    }
+  
+    #cult-page-text-after-explore {
+      font-size: 13px;
+     margin-top: 5%;
+     margin-bottom: 5%;
+    }
+  
+  
+  .inner-app-div {
+      display: flex;
+      flex-direction: column;
+  }
+  .left-app-div img {
+      width: 120px;
+      height: 49px;
+  }
+  
+  .app-store-icon-div {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .inner-app-div .left-app-div {
+      width: 90%;
+  }
+  
+  .left-app-div-text {
+      font-size: 30px;
+  }
+  
+  .left-app-div-lower-text {
+      font-size: 15px;
+  }
+  
+  .inner-app-div .right-mobile-icon-div {
+      display: none;
+  }
+  .bussiness-cult-inner-div img {
+      display: none;
+  }
+  
+  
+  .bussiness-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/business-cult-mweb.png");
+      background-size: 100% 100%;
+    
+  }
+  
+  .career-cult-inner-div img {
+      display: none;
+  }
+  
+  .career-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/career-mweb-cult.png");
+      background-size: 100% 100%;
+  }
+  
+  .arrow-image {
+    display: none;
+  }
+  .cult-div-text span {
+    display: none;
+  }
+  
+  .be-better-text {
+      font-size: 50px;
+  }
+  
+  .everyday-text {
+      font-size: 40px;
+  }
+  
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+  
+  
+  @media screen and (min-width: 720px) and (max-width : 900px) {
+    #div1 {
+      display: flex;
+      flex-direction: column;
+      /* margin: 30px 0 0px; */
+      padding: 0px 0 0px 0;
+      width: 80%;
+    }
+  
+    #div1 h2 {
+        font-size: 30px;
+    }
+  
+    .left-div {
+      font-size: 30px;
+      line-height: 1;
+    }
+  
+    .first-row-div {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 0.5%;
+    }
+  
+    .sub-text-div {
+      font-size: 15px;
+      color: #6E6D6D;
+      width: 90%;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.6;
+      margin: 0 0;
+    }
+  
+    .video-content {
+        min-height: auto;
+    }
+  
+    .div2 {
+        margin-top: 10%;
+    }
+  
+    #div2 img {
+        width: 63px;
+    }
+  
+    /* img {
+        width: 63px;
+    } */
+  
+    .image-cult img{
+        width: 63px;
+        display: flex;
+        justify-content: space-between;
+        height: 34px;
+        
+        left: 0;
+    }
+  
+    .cult-div-text {
+      font-size: 15px;
+      color: #4c4c4c;
+      font-family: BrandonTextWeb-Medium,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    }
+  
+    #cult-page-text-after-explore {
+      font-size: 13px;
+     margin-top: 5%;
+     margin-bottom: 5%;
+    }
+  
+  
+  .inner-app-div {
+      display: flex;
+      flex-direction: column;
+  }
+  .left-app-div img {
+      width: 120px;
+      height: 49px;
+  }
+  
+  .app-store-icon-div {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .inner-app-div .left-app-div {
+      width: 90%;
+  }
+  
+  .left-app-div-text {
+      font-size: 30px;
+  }
+  
+  .left-app-div-lower-text {
+      font-size: 15px;
+  }
+  
+  .inner-app-div .right-mobile-icon-div {
+      display: none;
+  }
+  .bussiness-cult-inner-div img {
+      display: none;
+  }
+  
+  
+  .bussiness-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/business-cult-mweb.png");
+      background-size: 100% 100%;
+    
+  }
+  
+  .career-cult-inner-div img {
+      display: none;
+  }
+  
+  .career-cult-inner-div {
+      background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/clp/career-mweb-cult.png");
+      background-size: 100% 100%;
+  }
+  
+  .arrow-image {
+    display: none;
+  }
+  
+  .cult-div-text span {
+    display: none;
+  }
+  
+  .be-better-text {
+      font-size: 50px;
+  }
+  
+  .everyday-text {
+      font-size: 40px;
+  }
+  
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+       /* <------------SmallScreen NAvbar----------------> */
+       #hamburgericon{
+        padding:10px;
+    }
+    #hamburgericon>div {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(0, 0, 0);
+        margin: 6px 0;
+        z-index: 1;
+    }
+    #smallScreenNav{
+        display: none;
+        position:sticky;
+        transition: all 1s ease 1s;
+    }
+    #dropdownNav{
+        display: none;
+        display:flex;
+        flex-direction: column;
+        width: 50vw;
+        height:100vh;
+        position:absolute;
+        top:0px;
+        left: 0px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background: rgb(34, 34, 34);
+        padding-top: 30px;
+         max-width: 350px;
+         transition: all 1s ease 1s;
+    }
+    #cross>.fa-times{
+        color:white;
+        font-size: 38px;
+        position: absolute;
+        top:20px;
+        right: 30px;
+        
+    }
+    #cultlogodis>img{
+        width: 100px;
+        margin-bottom: 30px;
+        padding-left: 3px;
+    }
+    #navPages{
+        display:flex;
+        flex-direction:column;
+        color: white;
+    
+    } 
+    #navPages>div{
+        width:100%;
+        /* text-align:center; */
+        padding: 20px;
+        padding-right: 40px;
+        text-transform: uppercase;
+        padding-left: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+        color: white;
+        max-width: 350px;
+        /* border-top: 1px solid white; */
+        border-bottom: 1px solid rgb(0, 0, 0);
+    }
+    #navPages>div>a{
+        text-decoration: none;
+        color: white;
+    }
+    #downLogin{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        color: white;
+        
+    }
+    #downLogin>div{
+        width:100%;
+        text-transform: none;
+        /* padding: 20px 20px 20px 0px; */
+        font-size: 15px;
+        padding: 15px;
+        padding-right: 40px;
+        text-transform: uppercase;
+        padding-left: 40px;
+        /* font-weight: bold; */
+        font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+        color: white;
+        max-width: 350px;
+        /* /* max-width: 350px; */
+    }
+    #downLogin>div>a{
+        text-decoration: none;
+        color: white;
+    }
+      /* <-----------MediaQueriesNavbar------------> */
+    @media screen and (max-width:720px){
+        #innerNavbar{
+          width: 50%;
+          justify-content:center;
+          align-items:center;
+          margin-left: auto;
+        }
+        #innerNavbar>#logo{
+            /* justify-content:center; */
+        }
+        #location{
+            /* width: 30vw; */
+            margin-right:0px;
+           margin-left: 100%;
+        }
+        #diff-pages,#location,#open,#spet,#order,#profile,#spet,#eatSubpages,#logged-out,#blue-dot,#cartNik{
+            display:none;
+        }
+        #footerd4 img{
+            width:5%;
+        }
+        #eatheader{
+            width:80%;
+        }
+        #smallScreenNav{
+            display: block;
+        }
+        #dropdownNav{
+            display: none;
+        }
+    } 

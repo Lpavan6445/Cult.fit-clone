@@ -114,7 +114,11 @@ function openOtp() {
   titleOtpContainer.className = "title-otp-container";
   let titleOtpContainerInner = document.createElement("div");
   titleOtpContainerInner.className = "titleContainerInner";
+  
   let backImage = document.createElement("img");
+  backImage.addEventListener("click",()=>{
+    window.location.href = "/"
+  })
   backImage.src = "https://static.cure.fit/assets/images/back-arrow-pink.svg";
   let EnterOtp = document.createElement("span");
   EnterOtp.className = "enter-otp";
@@ -398,8 +402,8 @@ function emailSignIn() {
   emailSignInContinue.addEventListener("click", () => {
     Email.send({
       Host: "smtp.mailtrap.io",
-      Username: "c0fdd26b6428af",
-      Password: "a7674dc1ad0aec",
+      Username: "a8f80a89cc5578",
+      Password: "84a845cb0c2d8a",
       To: emailInput.value,
       From: "cult@fit.com",
       Subject: "Cultfit signIn",
