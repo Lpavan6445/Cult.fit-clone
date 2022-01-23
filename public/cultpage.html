@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULT</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/53cdcb7507a23013519313393248b9bd?family=BrandonTextWeb-Bold" rel="stylesheet" type="text/css"/>
+  <link href="//db.onlinewebfonts.com/c/47b83f8dbd3bf93e0df5674b32c6a7e4?family=BrandonTextWeb-Regular" rel="stylesheet" type="text/css"/>    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel = "icon" href ="https://static.cure.fit/assets/images/favicon-modified.png" type = "image/x-icon">
+</head>
+
+<style>
+     body{
+            font-family: BrandonTextWeb-Regular,Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+        }
+    /* <----------Loading---------> */
+#preloader{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* z-index: 999; */
+  /* background-color: rgb(0, 0, 0); */
+}
+#preloader>img{
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  /* padding:500px; */
+  top:  38vh;
+  left: 47%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  padding:20px;
+}
+#mainBody{
+   display:none;
+}
+   /* <---------Topleft DropDown-----------> */
+
+.headerDropDown{
+    display:none;
+    position: absolute;
+     width:17%;
+  /*    height:230px; */
+    border:1px solid black;
+    /* display:flex; */
+    flex-flow:row wrap;
+    justify-content:space-between;
+    padding: 3px;
+      background: rgb(255, 255, 255);
+  /*     color: rgb(255, 255, 255); */
+      text-align: center;
+      /* font-size: 16px; */
+      border: 1px solid rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0) 0px 0px 30px -16px;    left: 3%;
+      top: 80%;
+      z-index: 9999;
+  }
+  .headerDropDown>.dropDownElem{
+        padding: 20px;
+    /* width:30%; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  /*     width: 100%; */
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+  }
+  .headerDropDown>.dropDownElem:nth-child(3){
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(255, 49, 109);
+  }
+  .dropDownElem >div>img{
+    width:23px;
+    height:23px;
+  }
+  #dropdown-arrow{
+      padding:5px;
+      width: 25px;
+  }
+/* <-----------------NavBarStyle---------------------> */
+/* <-------------------------------- Login Arrow css -------------------------------------> */
+#logindata {
+            width: 200px;
+            /* height: 300px; */
+            background-color: #FFFFFF;
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            flex-wrap: wrap;
+             justify-content:space-between;
+            right: 0;
+            top:100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #profile{
+            width:40px;
+            height:40px;
+        }
+        .imgall {
+            width: 50px;
+            height: 25px;
+            padding-left: 10px;
+            
+        }
+
+        #list a{
+            color: black;
+            text-decoration: none;
+            /* margin-left: 12px; */
+            font-size: 13px;
+        }
+        #list {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            margin: 0px 10px;
+            cursor: pointer;
+            padding: 5px 0px;
+        }
+         #list:hover{
+            transition: background-color 0.3s ease-in-out 0s;
+            box-shadow: rgba(0, 0, 0, 0.219) 0px 4px 10px 0px;
+ 
+        }
+#navbar {
+    width: 100%;
+    height: 64px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 15%);
+    display: flex;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#spet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+#innerNavbar {
+    width: 97%;
+    margin: auto;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo { 
+    width: 10%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    /* border: 2px solid orange; */
+}
+
+.logo:hover {
+    color: rgb(163, 156, 156);
+}
+
+.diff-pages {
+    width: 40%;   
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   
+  
+    /* border: 1px solid green; */
+    margin-bottom: 0px;
+    margin-top: 0px;
+   
+}
+
+#navbar ul li {
+    height: 100%;
+    list-style: none;
+}
+#navbar ul li a img {
+    width: 25px;
+    height: 25px;
+}
+
+#navbar li a p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: "BrandonTextWeb-Medium";
+}
+#eatSubpages{
+    display: flex;
+    justify-content:space-between;
+    justify-content: center;
+    align-items: center;
+    /* width: 700px; */
+    
+}
+#eatSubpages ul li {
+    margin-right: 40px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.25;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-size: 17px;
+    font-weight: 600;
+}
+ #order> a:nth-child(1){
+    color: rgb(252, 46, 113);
+}
+.user-details {
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.blue-dot {
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: rgb(15, 209, 255);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.cityName {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    max-width: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1em;
+    height: 1em;
+    text-align: left;
+    white-space: nowrap;
+        font-size: 17px;
+}
+.location {
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+.logged-out {
+    display: flex;
+    padding: 0 0.5rem;
+    padding-top: 3px;
+    font-size: 17px;
+}
+
+.logged-out img {
+    width: 16px;
+    height: 16px;
+  
+    margin-right: 0.5rem;
+}
+
+.logged-out .login-text {
+    color: black;
+  font-size: 17px;
+  
+}
+
+
+.cart img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+     margin-left: 10px;
+}
+/* NAVBAR DOWN PART CSS */
+ @media screen and (min-width :901px) {
+    #Month{
+       height: 100px;
+       margin-top: 40px;
+       width: 80%;
+       margin-left: 140px;
+    }
+    #nTimeContainer{
+         height: 50px;
+         width: 80%;
+         margin-left: 140px;
+         margin-top: -2px;
+         background-color: rgb(236,236,236);
+    }
+    #NDemo {
+        line-height: 45px;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0px;
+            font-family: BrandonTextWeb-Bold,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+   }
+   #freeP{
+       color: rgb(51, 54, 63);
+    font-size: 24px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+   }
+   #freeDiv{
+       margin-top: 100px;
+       margin-left: 10%;
+   }
+   #experienceN{
+       margin-left: 10%;
+       font-size: 16px;
+        color: rgb(144, 142, 142);
+        font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+   }
+   #try1{
+       background-color: rgb(65,65,82);
+       height: 130px;
+       width: 250px;
+       margin-left: 10%;
+   }
+    #try2{
+       background-color: rgb(65,65,82);
+       height: 130px;
+       width: 250px;
+       margin-left: 2%;
+   }
+   #p01{
+       font-size: 40px;
+       margin-left: 40%;
+       margin-top: 5px;
+   }
+    #p02{
+       font-size: 40px;
+       margin-left: 40%;
+       margin-top: 5px;
+   }
+   #NbTN{
+       border-radius: 50PX;
+       height: 40px;
+       width: 170px;
+       background-color: rgb(255,50,120);
+       border: none;
+       margin-left: 17%;
+       margin-top: -50px;
+   }
+   #safestN{
+       font-size: 20px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+   }
+   #safestNDiv{
+       margin-top: 80px;
+       margin-left: 10%;
+   }
+   #videoDivN{
+       background-color: black;
+       width: 100%;
+       height: 270px;
+   }
+   #cultplusN{
+       margin-top: 60px;
+       background-color: rgb(88,98,132);
+       width: 100%;
+       height: 450px;
+   }
+   #cultplusNp{
+       color: rgb(255, 255, 255);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 30px;
+   }
+    #cultplusNp1{
+        color: rgb(136, 142, 158);
+    font-size: 14px;
+    margin-left: -30px;
+    text-align: center;
+    font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    }
+    #cultplusNp2{
+         text-align: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    }
+   #offerNdIVP{
+    color: rgb(255, 255, 255);
+    margin-left: 100px;
+    font-size: 16px;
+    text-align: unset;
+   }
+    #offerNdIV{
+        margin-left: 150px;
+    }
+    #chooseN{
+    margin-top: 35px;
+    font-size: 16px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    }
+    #nikDIV1{
+         font-size: 16px;
+         width: 350px;
+        height: 60px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 5px;    
+    }
+     #nikDIV2{
+          font-size: 16px;
+         width: 350px;
+        height: 60px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+          line-height: 5px;   
+    }
+     #nikDIV3{
+          font-size: 16px;
+         width: 350px;
+        height: 60px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 5px;   
+    }
+     #nikDIV4{
+         width: 350px;
+        height: 40px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+    }
+     #nikDIV5{
+         width: 350px;
+        height: 40px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+    }
+     #nikDIV6{
+         width: 350px;
+        height: 40px;
+        margin-left: 70px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+    }
+    #workoutDivN{
+        width: 80%;
+        margin-left: 60px;
+        margin-top: -10px;
+        display: grid;
+        grid-template-columns: repeat(4,26%);
+        grid-gap: 5%;
+    }
+    #Nquick{
+        margin-top: 80px;
+      
+
+    }
+    #NquickP{
+        margin-left: 4%;
+        font-weight: bolder;
+    color: rgb(51, 54, 63);
+    font-size: 24px;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    }
+    .Nquickp1{
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 18px;
+     margin-left: 4%;
+    }
+    .nikHr{
+        height: 2px;
+        background-color: grey;
+        width: 90%;
+        margin-right: 75px;
+        line-height: 0px;
+        margin-top: -11px;
+    }
+    #Nspirited{
+            font-size: 80px;
+    color: rgb(0, 0, 0);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    vertical-align: bottom;
+    margin-left: 4%;
+ }
+ #Nspirited1{
+         font-size: 60px;
+    color: rgb(0, 0, 0);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 0px;
+    margin-top: -50px;
+    letter-spacing: -0.6px;
+    vertical-align: bottom;
+    margin-left: 4%;
+}
+#Nspirited2{
+    font-size: 40px;
+    color: rgb(141, 147, 160);
+    font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 0px;
+    letter-spacing: -0.6px;
+    vertical-align: bottom;
+     margin-left: 4%;
+}
+ #Nikfooter{
+     background-color: black;
+     width: 100%;
+     height: 350px;
+     display: flex;
+ }
+ #footerd1{
+     width: 37%;
+     height: 100%;
+ }
+ #footerd1I{
+     width: 30%;
+     margin-left: 20%;
+     margin-top: 10%;
+ }
+  #footerd1P{
+      margin-left: 17%;
+      margin-top: 5%;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a2a2a2;
+  }
+   #footerd2{
+     width: 20%;
+     height: 100%;
+ }
+ .nikContact{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+    margin-left: 20%;
+ }
+  #footerd3{
+     width: 20%;
+     height: 100%;
+ }
+  #footerd4{
+     /* width: 20%; */
+     height: 100%;
+ }
+ .nikContact1{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+    margin-left: 15%;
+    margin-top: 10%;
+ }
+ /* FAQ CSS */
+ #faqi {
+            width: 100%;
+            height:auto;
+            background-color: #F2F4F8;
+            /* text-align: center; */
+            /* margin-left: -200px; */
+            margin: auto;
+        }
+
+        .fabutton {
+            width: 70%;
+            color: #616263;
+            border: none;
+            background: none;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        .fabuttonhh {
+            width: 90%;
+        }
+
+        #text1 {
+            color: #a9a9a9;
+            margin-left: 25%;
+            width: 50%;
+        }
+
+        #text2 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text3 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text4 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text5 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text6 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text7 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+    }
+
+        /* media screen query css part */
+
+        @media screen and (min-width :0px) and (max-width : 480px){
+            body{
+            font-family: BrandonTextWeb-Regular,Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            width: 100%;
+           }
+              #Month{
+                height: 100px;
+                margin-top: -40px;
+                width: 100%;
+                margin-left: 0.5%;
+                object-fit:contain;
+            }
+            #nTimeContainer{
+                height: 40px;
+                width: 100%;
+                margin-left: 1%;
+                margin-top: -30px;
+                background-color: rgb(236,236,236);
+            }
+            #freeDiv{
+                margin-top: 1px;
+                margin-left: 2%;
+            }
+            #freeP{
+                font-size: 17px;
+            }
+            #exp{
+                margin-top: -10px;
+            }
+            #tryN{
+                margin-left: 10%;
+                width: 80%;
+            }
+            #try1{
+                margin-left: -10%;
+                width: 100%;
+            }
+             #try2{
+                margin-left: 10%;
+                width: 100%;
+            }
+              #NbTN{
+                border-radius: 50PX;
+                height: 40px;
+                width: 70%;
+                background-color: rgb(255,50,120);
+                border: none;
+                margin-left: 13%;
+            }
+            #experienceN{
+            margin-left: 2%;
+            font-size: 16px;
+            color: rgb(144, 142, 142);
+            font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        }
+        #p01{
+                font-size: 40px;
+                margin-left: 35%;
+                margin-top: 1px;
+            }
+              #p02{
+                font-size: 40px;
+                margin-left: 35%;
+                margin-top: 1px;
+            }
+
+            #img1N{
+                height: 100px;
+                 object-fit:contain;
+            }
+            #NDemo{
+                font-size: 20px;
+            }
+            #safestNDiv{
+                margin-top: 20px;
+                margin-left: 10%;
+         }
+          #videoDivN{
+            background-color: black;
+            width: 100%;
+            height: 80px;
+          }
+           #cultplusN{
+                margin-top: 20px;
+                background-color: rgb(88,98,132);
+                width: 100%;
+                height: 450px;
+         }
+          #cultplusNp{
+                text-align: center;
+            font-size:17px;
+            color: rgb(255, 255, 255);
+         }
+          #offerNdIV{
+        margin-left: 0px;
+        width: 100%;
+         }
+         #offerNdIVP{
+            color: rgb(255, 255, 255);
+            margin-left: -3px;
+            font-size: 14px;
+            text-align: unset;
+         }
+         #nikDIV1{
+         font-size: 12px;
+         width: 120px;
+        height: 60px;
+        margin-left: 40px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }   
+         #nikDIV2{
+         font-size: 12px;
+         width: 120px;
+        height: 60px;
+        margin-left: 10px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }
+         #nikDIV2 > span{
+             margin-left: -200px;
+         }
+          #nikDIV3{
+         font-size: 12px;
+         width: 120px;
+        height: 60px;
+        margin-left: 10px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }
+         #buy{
+             display: none;
+         }
+         #buy2{
+            display: none;
+         }
+         #buy3{
+            display: none;
+         }
+         #onlyToday{
+             width: 100%;
+         }
+         #nikDIV4{
+            width: 100px;
+            font-size: 12px;
+            height: 120px;
+            margin-left: 40px;
+         }
+          #nikDIV5{
+            width: 120px; 
+            font-size: 12px;
+            height: 120px;
+            margin-left: 5px;
+         }
+          #nikDIV6{
+            width: 120px; 
+            font-size: 12px;
+            height: 120px;
+            margin-left: 5px;
+         }
+        #cultplusN{
+       margin-top: 60px;
+       background-color: rgb(88,98,132);
+       width: 100%;
+       height: 550px;
+       }
+       #workoutN{
+           margin-top: -100px;
+           margin-left: -50px;
+       }
+        #workoutDivN{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5%;
+         }
+         #NquickP{
+            margin-left: 4%;
+            font-weight: bolder;
+            color: rgb(51, 54, 63);
+            font-size: 20px;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            }
+            #spirit{
+                margin-top: -50px;
+            }
+             #Nspirited{
+            font-size: 60px;
+                color: rgb(0, 0, 0);
+                font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+                line-height: 1.2;
+                letter-spacing: -0.6px;
+                vertical-align: bottom;
+            }
+        #Nspirited1{
+                font-size: 60px;
+            color: rgb(0, 0, 0);
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 0px;
+            margin-top: -50px;
+            letter-spacing: -0.6px;
+            vertical-align: bottom;
+            margin-left: 4%;
+        }
+        #Nspirited2{
+            font-size: 30px;
+            color: rgb(141, 147, 160);
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 0px;
+            letter-spacing: -0.6px;
+            vertical-align: bottom;
+        } 
+           #Nikfooter{
+            background-color: black;
+            width: 100%;
+            height: 550px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: -100%;
+        }
+         #footerd1{
+            font-size: 20px;
+            width: 120px;
+            margin-left: -10px;
+        }
+        #footerd2{
+            margin-left: -10px;
+        }
+        #footerd4{
+            margin-left: -50px;
+            margin-top: -200px;
+        }
+        #smallContact > p{
+            margin-top: -10px;
+            width: 100%;
+        }
+    }
+ @media screen and (min-width :481px) and (max-width : 900px){
+            body{
+            font-family: BrandonTextWeb-Regular,Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            width: 100%;
+           }
+              #Month{
+                height: 100px;
+                margin-top: -10px;
+                width: 100%;
+                margin-left: 0.5%;
+                object-fit:contain;
+            }
+            #nTimeContainer{
+                height: 40px;
+                width: 100%;
+                margin-left: 1%;
+                margin-top: -30px;
+                background-color: rgb(236,236,236);
+            }
+            #buy2{
+                display: none;
+            }
+            #buy3{
+               display: none;
+            }
+            #freeDiv{
+                margin-top: 1px;
+                margin-left: 2%;
+            }
+            #freeP{
+                font-size: 17px;
+            }
+            #exp{
+                margin-top: -10px;
+            }
+            #tryN{
+                margin-left: 10%;
+                width: 80%;
+            }
+            #try1{
+                margin-left: -10%;
+                width: 100%;
+            }
+             #try2{
+                margin-left: 10%;
+                width: 100%;
+            }
+              #NbTN{
+                border-radius: 50PX;
+                height: 40px;
+                width: 70%;
+                background-color: rgb(255,50,120);
+                border: none;
+                margin-left: 13%;
+            }
+            #experienceN{
+            margin-left: 2%;
+            font-size: 16px;
+            color: rgb(144, 142, 142);
+            font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        }
+        #p01{
+                font-size: 40px;
+                margin-left: 35%;
+                margin-top: 1px;
+            }
+              #p02{
+                font-size: 40px;
+                margin-left: 35%;
+                margin-top: 1px;
+            }
+
+            #img1N{
+                height: 100px;
+                width: 100%;
+            }
+            #NDemo{
+                font-size: 20px;
+            }
+            #safestNDiv{
+                margin-top: 20px;
+                margin-left: 10%;
+         }
+          #videoDivN{
+            background-color: black;
+            width: 100%;
+            height: 80px;
+          }
+           #cultplusN{
+                margin-top: 20px;
+                background-color: rgb(88,98,132);
+                width: 100%;
+                height: 450px;
+         }
+          #cultplusNp{
+                text-align: center;
+            font-size:17px;
+            color: rgb(255, 255, 255);
+         }
+          #offerNdIV{
+            justify-content: space-around;
+                width: 70%;
+         }
+         #offerNdIVP{
+            color: rgb(255, 255, 255);
+            margin-left: -3px;
+            font-size: 14px;
+            text-align: unset;
+         }
+         #nikDIV1{
+         font-size: 12px;
+         width: 200px;
+        height: 60px;
+        margin-left: 80px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }   
+         #nikDIV2{
+         font-size: 12px;
+          width: 200px;
+        height: 60px;
+        margin-left: 10px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }
+         #nikDIV2 > span{
+             margin-left: -200px;
+         }
+          #nikDIV3{
+         font-size: 12px;
+           width: 200px;
+        height: 60px;
+        margin-left: 10px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        line-height: 0px;    
+         }
+         #onlyToday{
+             width: 100%;
+         }
+         #nikDIV4{
+              width: 200px;
+            font-size: 12px;
+          height: 60px;
+            margin-left: 80px;
+         }
+          #nikDIV5{
+              width: 200px;
+            font-size: 12px;
+           height: 60px;
+            margin-left: 5px;
+         }
+          #nikDIV6{
+             width: 200px;
+            font-size: 12px;
+            height: 60px;
+            margin-left: 5px;
+         }
+        #cultplusN{
+       margin-top: 60px;
+       background-color: rgb(88,98,132);
+       width: 100%;
+       height: 450px;
+       }
+       #workoutN{
+           margin-top: -100px;
+           margin-left: -50px;
+       }
+        #workoutDivN{
+        width: 90%;
+        margin-left: 30px;
+        margin-top: -10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5%;
+         }
+         #NquickP{
+            margin-left: 4%;
+            font-weight: bolder;
+            color: rgb(51, 54, 63);
+            font-size: 20px;
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            }
+            #spirit{
+                margin-top: -50px;
+            }
+             #Nspirited{
+            font-size: 60px;
+                color: rgb(0, 0, 0);
+                font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+                line-height: 1.2;
+                letter-spacing: -0.6px;
+                vertical-align: bottom;
+            }
+        #Nspirited1{
+                font-size: 60px;
+            color: rgb(0, 0, 0);
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 0px;
+            margin-top: -50px;
+            letter-spacing: -0.6px;
+            vertical-align: bottom;
+            margin-left: 4%;
+        }
+        #Nspirited2{
+            font-size: 30px;
+            color: rgb(141, 147, 160);
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 0px;
+            letter-spacing: -0.6px;
+            vertical-align: bottom;
+        } 
+           #Nikfooter{
+            background-color: black;
+            width: 100%;
+            height: 550px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: -100%;
+        }
+         #footerd1{
+            font-size: 20px;
+            width: 120px;
+            margin-left: -10px;
+        }
+        #footerd2{
+            margin-left: -10px;
+        }
+        #footerd4{
+            margin-left: -50px;
+            margin-top: -200px;
+        }
+        #smallContact > p{
+            margin-top: -10px;
+            width: 100%;
+        }
+    }
+        /* <------------SmallScreen NAvbar----------------> */
+            #hamburgericon{
+    padding:10px;
+}
+#hamburgericon>div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    z-index: 1;
+}
+#smallScreenNav{
+    display: none;
+    position:sticky;
+    transition: all 1s ease 1s;
+}
+#dropdownNav{
+    display: none;
+    display:flex;
+    flex-direction: column;
+    width: 50vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(34, 34, 34);
+    padding-top: 30px;
+     max-width: 350px;
+     transition: all 1s ease 1s;
+}
+#cross>.fa-times{
+    color:white;
+    font-size: 38px;
+    position: absolute;
+    top:20px;
+    right: 30px;
+    
+}
+#cultlogodis>img{
+    width: 100px;
+    margin-bottom: 30px;
+    padding-left: 3px;
+}
+#navPages{
+    display:flex;
+    flex-direction:column;
+    color: white;
+
+} 
+#navPages>div{
+    width:100%;
+    /* text-align:center; */
+    padding: 20px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* border-top: 1px solid white; */
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+#navPages>div>a{
+    text-decoration: none;
+    color: white;
+}
+#downLogin{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    color: white;
+    
+}
+#downLogin>div{
+    width:100%;
+    text-transform: none;
+    /* padding: 20px 20px 20px 0px; */
+    font-size: 15px;
+    padding: 15px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    /* font-weight: bold; */
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* /* max-width: 350px; */
+}
+  /* <-----------MediaQueriesNavbar------------> */
+@media screen and (max-width:720px){
+    #innerNavbar{
+      width: 50%;
+      justify-content:center;
+      align-items:center;
+      margin-left: auto;
+    }
+    #innerNavbar>#logo{
+        /* justify-content:center; */
+    }
+    #location{
+        /* width: 30vw; */
+        margin-right:0px;
+       margin-left: 100%;
+    }
+    #location,#cart,#spet,#order,#profile,#spet,#eatSubpages,#logged-out,#blue-dot,#cartNik{
+        display:none;
+    }
+    #footerd4 img{
+        width:5%;
+    }
+    #eatheader{
+        width:80%;
+    }
+    #smallScreenNav{
+        display: block;
+    }
+    #dropdownNav{
+        display:none;
+    }
+  }
+    
+</style>
+
+<body>
+    <!----LoadingAnimation---->
+    <div id="preloader">
+        <img src="https://static.cure.fit/assets/images/loader-v2.gif">
+    </div>
+    <!----MainBody----->
+    <div id="mainBody">
+        <!----All Code----->
+    <!------NavDropDown top left--------->
+    <div id="navbar">
+        `<div id="smallScreenNav">
+            <div id="hamburgericon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="dropdownNav">
+                <div id="cultlogodis">
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man-white.svg" alt="user-image" class=" style-prefix-2jfr04 efaomd31" loading="lazy" width="40" height="45.45454545454545">
+                </div>
+                <div id="cross">
+                    <i class="fas fa-times"></i>
+                </div>
+                 <div id="navPages">
+                       <div><a href="/index.html">Home</a></div>
+                       <div><a href="/cultpage.html">CULT</a></div>
+                       <div><a href="/live.html">LIVE</a></div>
+                       <div><a href="/care.html">CARE</a></div>
+                       <div><a href="/mind.html">MIND</a></div>
+                       <div><a href="/storepage.html">STORE</a></div>
+                       <div><a href="/eatordernow.html">EAT</a></div>
+                      
+                 </div>
+                 <div id="downLogin">
+                    <div>SignIn</div>
+                    <div>Cart</div>
+                    <div>LogOut</div>
+               </div>
+            </div>
+          </div>
+        <div class="headerDropDown" id="headDropDown">
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/cult-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CULT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/Livefit.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    LIVE
+                </div>
+            </div>
+            <div onclick="window.location.href='./EAT/eatordernow.html'" class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/eat-hover-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    EAT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/mind-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    MIND
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/carefit-blk.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CARE
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/store-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    STORE
+                </div>
+            </div>
+        </div>
+        <!-----Navbar----------->
+        <div class="headerDropDown" id="headDropDown">
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/cult-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CULT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/Livefit.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    LIVE
+                </div>
+            </div>
+            <div onclick="window.location.href='./EAT/eatordernow.html'" class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/eat-hover-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    EAT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/mind-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    MIND
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/carefit-blk.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CARE
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " >
+                    <img alt="" src="https://static.cure.fit/assets/images/store-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    STORE
+                </div>
+            </div>
+        </div>
+        <div id="innerNavbar">
+            <div id="logo" class="logo">
+                <a href="logout.html">
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="cult fit logo">
+                </a>
+                <div id="spet">
+    
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cult2.svg"
+                        alt="eat" class=" css-130q1oe-ImageElement efaomd31" loading="lazy" width="66.66"
+                        height="19.999999999999996">
+                    <img id="dropdown-arrow" class="dropdownarrow" src="https://static.cure.fit/assets/images/arrow-clp.svg"
+                        alt="Expand menu" style="transform: rotate(180deg); min-height: 15px; min-width: 15px;">
+                </div>
+            </div>
+            <div id="eatSubpages">
+                <div >
+                    <ul>
+                        <li style="color:rgb(252, 46, 113);;" id="cc">Cult Centers</li>
+                        <li id="gymsN">Gyms</li>
+                        <li id="online">Online PT</li>
+                        <li id="cults">cultsport</li>
+                         <li id="luxury">Luxury Gyms</li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div id="user-details" class="user-details">
+                <div id="location" class="location">
+    
+                    <div id="blue-dot" class="blue-dot"></div>
+                    <div id="cityName" class="cityName">Bangalore</div>
+                </div>
+                <div id="profile">
+                    <img src="https://profile-pictures-prod.s3.amazonaws.com/5491b50b-b284-490f-a55d-db97431b1e32" style="max-width:100%;max-height:90%">
+                </div>
+                <div id="logged-out" class="logged-out">
+                    <div>
+                        <img id="image11" src="https://cdn-icons-png.flaticon.com/512/25/25623.png" />
+                      </div>
+
+                     <div id="logindata">
+                    
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/profile-icon.svg" />
+                              <a class="allat" >Profile</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/cart-black.svg" />
+                              <a class="allat" >Orders</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/health-profile-black.svg" />
+                              <a class="allat" >Medical Records</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/combined-shape-black.svg" />
+                              <a class="allat" >Active Packs</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/coupon-black.svg" />
+                              <a class="allat" >Redeem Vouchers</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/settings-black.svg" />
+                              <a class="allat" >Account</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/support-black.svg" />
+                              <a class="allat" >Support</a>
+                          </div>
+                          <div id="list">
+                              <img class="imgall" src="https://static.cure.fit/assets/images/logout-black.svg" />
+                              <a class="allat" href="">Logout</a>
+                          </div>
+                  </div>
+                </div>
+                <div id="cart" class="cart">
+                    <img src="https://static.cure.fit/assets/images/cart-image.svg" alt="cart logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------- NAVBAR DOWN PART STARTS HERE ------------------------------------------>
+    <div id="img1">
+        <img id="img1N" height="290px" width="100%"  src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/1f0a5eb4-48d0-4c91-9477-957b219425bd.png" alt="">
+    </div>
+    <div>
+        <img id="Month" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/8fd49be4-c4af-4026-893f-5a05fd089f30.png" alt="">
+    </div>
+    <div id="nTimeContainer">
+            <p id="NDemo"></p>
+    </div>
+    <div id="freeDiv">
+        <p id="freeP">Two Free Trials</p>
+    </div>
+    <div id="exp">
+        <p id="experienceN">Experience Cult classes for free</p>
+    </div>
+     <div id="tryN" style="display: flex;">
+        <div id="try1">
+        <p id="p01">01</p>
+        <button id="NbTN">TRY FOR FREE</button>
+        </div>
+        <div id="try2">
+        <p id="p02">02</p>
+        <button id="NbTN">TRY FOR FREE</button>
+        </div>
+     </div>
+     <div id="safestNDiv">
+         <p id="safestN">See why we are the safest gym in town</p>
+     </div>
+     <a href="cultmotivation.html">
+        <div id="videoDivN">
+            <img width="100%"
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/f16a1d26-4c36-4b0d-b743-0d79da633956.jpg"
+                alt="">
+        </div>
+     </a>
+     <!-------------------------------------  cultpass ELITE BIG BOX----------------------------------------->
+     <div id="cultplusN">
+        <div>
+            <p id="cultplusNp">cultpass ELITE</p>
+        </div>
+        <div>
+            <p id="cultplusNp1">Unlimited access to all cult centers, gyms and live workouts</p>
+        </div>
+        <div id="enjoyN">
+            <p id="cultplusNp2">------------------ENJOY THE BENEFITS OF------------------</p>
+        </div>
+        <div id="offerNdIV" style="display: flex;">
+            <div id="offerNdIVP">
+                <p>Buy Now start anytime</p>
+            </div>
+            <div id="offerNdIVP">
+                <p>Pausepack anytime</p>
+            </div>
+            <div id="offerNdIVP">
+                <p>Safest gyms In Town</p>
+            </div>
+            <div id="offerNdIVP">
+                <p>No-Cost EMI available</p>
+            </div>
+        </div>
+
+        <div id="chooseN">
+            <p>Choose Your Subscription</p>
+        </div>
+   <!----------------------------- all year different plan part --------------------------------->
+
+   <!----------------------------- this is ths 1st 3 box of plan ---------------------------------->
+        <div style="display: flex;margin-top: 50px;">
+            <div id="nikDIV1">
+                <span><p style="margin-left: 20px;">12 MONTHS
+                    <span id="buy" style="margin-left: 270px;color: #fc2e71 ;">BUY</span>
+                </p></span>
+                <span style="margin-left: 20px;text-decoration: line-through;">₹45550</span><span style="margin-left: 20px;">₹16990</span>
+            </div>
+            <div id="nikDIV2">
+                <p style="margin-left: 20px;">6 MONTHS
+                <span id="buy2"  style="margin-left: 270px;color: #fc2e71 ;">BUY</span>
+                </p>
+                <span style="margin-left: 20px; text-decoration: line-through;">₹23550</span><span style="margin-left: 20px;">₹14990</span>
+            </div>
+            <div id="nikDIV3">
+                <p style="margin-left: 20px;">3 MONTHS
+                <span id="buy3"style="margin-left: 270px;color: #fc2e71 ;">BUY</span>
+                </p>
+                <span style="margin-left: 20px;text-decoration: line-through;">₹12550</span><span style="margin-left: 20px;">₹9990</span>
+            </div>
+        </div>
+
+        <!-------------------- this are the below 3 box of plans which cover 2 month extension --------->
+        <div id="onlyToday" style="display: flex;margin-top: 2px;">
+            <div id="nikDIV4">
+               <span><img style="margin-left: 20px;margin-top: 10px;" src="https://static.cure.fit/assets/images/offer-icon-copy.svg" alt=""></span>
+               <span><p style="margin-left: 50px;margin-top: -20px;">Only Today I Get FREE 2 Month Extension</p></span>
+            </div>
+            <div id="nikDIV5">
+                <span><img style="margin-left: 20px;margin-top: 10px;" src="https://static.cure.fit/assets/images/offer-icon-copy.svg"
+                        alt=""></span>
+                <span>
+                    <p style="margin-left: 50px;margin-top: -20px;">Only Today I Get FREE 2 Month Extension</p>
+                </span>
+            </div>
+            <div id="nikDIV6">
+                <span><img style="margin-left: 20px;margin-top: 10px;" src="https://static.cure.fit/assets/images/offer-icon-copy.svg"
+                        alt=""></span>
+                <span>
+                    <p style="margin-left: 50px;margin-top: -20px;">Only Today I Get FREE 2 Month Extension</p>
+                </span>
+            </div>
+        </div>
+
+        <!---------------------------------- workout part starts here ------------------------------------------------------->
+
+        <div style="margin-top: 150px;height: auto;">
+            <div id="workoutN">
+                <p style="margin-left: 60px;font-size: 25px;">WORKOUTS</p>
+            </div>
+            <div style="height: auto;" id="workoutDivN">
+                <div id="">
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/1_id/PRODUCT_BNR_2021-11-03T07:57:46.615Z.png"
+                        alt="">
+                </div>
+                <div>
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/4_id/PRODUCT_BNR_2021-11-02T11:02:03.281Z.png"
+                        alt="">
+                </div>
+                <div>
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/65_id/PRODUCT_BNR_2021-11-02T10:50:36.823Z.png"
+                        alt="">
+                </div>
+                <div>
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/22_id/PRODUCT_BNR_2021-11-03T08:02:26.795Z.png"
+                        alt="">
+                </div>
+                <div>
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/84_id/PRODUCT_BNR_2021-11-02T10:55:56.704Z.png"
+                        alt="">
+                </div>
+                <div>
+                    <img width="100%"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/317_id/PRODUCT_BNR_2021-11-03T07:41:36.148Z.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------- down part of workout -------------------------------------->
+        <div id="Nquick">
+            <p id="NquickP">Quick Links</p>
+            <p class="Nquickp1">Help & Support</p>
+            <hr class="nikHr">
+            <p class="Nquickp1">Terms and Conditions</p>
+            <hr class="nikHr">
+        </div>
+
+        <!-------------------------- be spirited part ------------------------------>
+        <div id="spirit">
+            <p id="Nspirited">BE SPIRITED</p>
+            <p id="Nspirited1">FEARLESS</p>
+            <p id="Nspirited2">AN EVERYDAY ATHLETE</p>
+        </div>
+        <!------------------------------ FAQ PART --------------------------------------->
+        <div id="faqi">
+            <p style="font-size: 30PX;margin-left: 100PX;">FAQ</p>
+            <p style="font-size: 20PX;margin-left: 100PX;line-height: 0PX;"> QUESTIONS</p>
+            <div>
+                <button class="fabutton" style="margin-left: -249px;" >• What is cultsport and what does it offer?</button>
+                <i onclick="first()" style="margin-left: 500px;" class="fas fa-chevron-down"></i>
+                <p id="text1"></p>
+                <hr class="fabuttonhh">
+            </div>
+
+            <div>
+                <button class="fabutton" style="margin-left: -130px;" >•What makes cultsport special?</button>
+                <i onclick="second()" style="margin-left: 380px;" class="fas fa-chevron-down"></i>
+                <p id="text2"></p>
+                <hr class="fabuttonhh">
+            </div>
+
+            <div>
+                <button class="fabutton" style="margin-left: -90px;" >• How do I track my cultsport order?</button>
+                <i onclick="third()" style="margin-left: 340px;" class="fas fa-chevron-down"></i>
+                <p id="text3"></p>
+                <hr class="fabuttonhh">
+            </div>
+
+            <div>
+                <button class="fabutton" style="margin-left: -160px;" >• How do I cancel my cultsport Order?</button>
+                <i onclick="four()" style="margin-left: 410px;" class="fas fa-chevron-down"></i>
+                <p id="text4"></p>
+                <hr class="fabuttonhh">
+            </div>
+          
+            <div>
+                <button class="fabutton" style="margin-left: -130px;" >•I am not satisfied with my cultsport product. Can I return or exchange it?</button>
+                <i onclick="five()" style="margin-left: 380px;" class="fas fa-chevron-down"></i>
+                <p id="text5"></p>
+                <hr class="fabuttonhh">
+            </div>
+        </div>
+
+    <!-------------------------------- footer part ------------------------------------->
+    <div id="Nikfooter">
+       <div id="footerd1">
+           <img id="footerd1I" src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="">
+           <p id="footerd1P">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, and
+        medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
+        </div>
+       <div id="footerd2">
+           <p style="margin-top: 10%;" class="nikContact">CONTACT US</p>
+           <p class="nikContact">BLOG</p>
+           <p class="nikContact">PARTNER.FIT</p>
+           <p class="nikContact">TALKS</p>
+           <P class="nikContact">CAREERS</P>
+       </div>
+       <div id="footerd3">
+            <p class="nikContact1">CULTFIT FOR BUSINESSES</p>
+            <p class="nikContact1">CULT FRANCHISE</p>
+            <p class="nikContact1">CULT PASS NETWORK</p>
+            <P class="nikContact1">CORPORATE PARTNERSHIPS</P>
+       </div>
+       <!-- app store part -->
+       <div id="footerd4">
+                <a href="https://apps.apple.com/us/app/cure-fit/id1217794588">
+                    <img style="margin-left: 25%;margin-top: 20%;" src="https://static.cure.fit/assets/images/app-store.svg" alt="">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=fit.cure.android">
+                    <img style="margin-left: 25%;margin-top: 10%;" src="https://static.cure.fit/assets/images/play-store.svg" alt="">
+                </a>
+       </div>
+    </div>
+    <div style="display: flex;color: whitesmoke;margin-top: -50px;" id="smallContact">
+        <p style="margin-left: 5%;">CONTACT US</p>
+        <p  style="margin-left: 5%;">FAQ</p>
+        <p  style="margin-left: 5%;">Terms & conditions</p>
+        <p  style="margin-left: 5%;">Privacy Policy</p>
+        <p  style="margin-left: 5%;">Refund Policy</p>
+        <a href="https://www.facebook.com/cultfitofficial">
+           <img style="margin-left: 300px;margin-top: 20px;"src="https://static.cure.fit/assets/images/facebook_icon_white.svg" alt="">
+        </a>
+        <a href="https://twitter.com/cultfitOfficial">
+            <img style="margin-left: 50px;margin-top: 20px;" src="https://static.cure.fit/assets/images/twitter_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/cultfitOfficial/">
+                <img style="margin-left: 50px;margin-top: 20px;" src="https://static.cure.fit/assets/images/instagram_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg">
+            <img style="margin-left: 50px;margin-top: 20px;" src="https://static.cure.fit/assets/images/youtube_icon_white_1.svg" alt="">
+        </a>
+    </div>
+    </div>
+    
+</body>
+<script>
+    // loading part
+      var myVar;
+        window.addEventListener('load', (event) => {
+            myVar = setTimeout(showPage, 500);
+        });
+
+        function showPage() {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("mainBody").style.display = "block";
+        }
+</script>
+
+</html>
+
+
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var hours = Math.floor((distance % (100000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("NDemo").innerHTML = hours + "h:"
+            + minutes + "m:" + seconds + "s";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("NDemo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+
+
+
+    // FAQ PART SCRIPT
+
+    function first() {
+            document.getElementById("text2").innerHTML = "";
+            document.getElementById("text3").innerHTML = "";
+            document.getElementById("text4").innerHTML = "";
+            document.getElementById("text5").innerHTML = "";
+            document.getElementById("text1").innerHTML = `<p>At Cult, we make fitness fun and easy. We have best-in-class trainers & offer group workouts ranging from yoga to Boxing. Our workouts can be done both at a cult center and at home with the help of do it yourself (DIY) workout videos. Cult.fiuses the best in technology to give you a world-class experience. You can book classes, follow workout videos - all with the click of a button from the cult.fit app or website. </h3>
+             `
+        }
+        function second() {
+            document.getElementById("text1").innerHTML = "";
+            document.getElementById("text3").innerHTML = "";
+            document.getElementById("text4").innerHTML = "";
+            document.getElementById("text5").innerHTML = "";
+            document.getElementById("text2").innerHTML = `<p>At cult centers, you’ll find a wide variety of workout formats, such as - Boxing, Dance Fitness, Yoga, S&C, and HRX. These workouts focus on strength, muscle endurance, flexibility, stamina & balance. So mix it up, pick formats that help you achieve your personal fitness goals.  You’ll also find unique workout formats designed by Bollywood stars like Hrithik Roshan! We can assure you that your sessions will be more fun, interesting, and less monotonous.  You can find more info about all our workout formats here. If you prefer to workout at home, we've got you covered! You can follow DIY and LIVE videos that are meant for both beginner & advanced levels and focus on building strength, stamina & mobility.
+Do you find this helpful?
+YES
+NO</h3>`
+        }
+        function third() {
+            document.getElementById("text1").innerHTML = "";
+            document.getElementById("text2").innerHTML = "";
+            document.getElementById("text4").innerHTML = "";
+            document.getElementById("text5").innerHTML = "";
+            document.getElementById("text3").innerHTML = `<p>Absolutely! You get not just one, but two trial sessions across any of our centers and at no cost. Booking your trial session is super easy and can be done via our website or app.  1. Click "Cult"  2. Hit "Book 2 Free Classes"  3. Pick a center your choice of workout at your convenient time!  If you have received a voucher from one of our partner companies for a free 7 day trial, you can activate your trial by clicking here https://www.cure.fit/me/vouchers   For any reason, if you won't be able to make it to your trial session, we encourage you to CANCEL the session 60 mins in advance. If you do not attend the trial session or forgot to cancel it, it will result in a no-show In any case, if you purchase a cultpass without booking a trial session, please note that you will not be eligible to utilize them later. 
+Do you find this helpful?
+YES
+NO</h3>`
+        }
+        function four() {
+            document.getElementById("text1").innerHTML = "";
+            document.getElementById("text2").innerHTML = "";
+            document.getElementById("text3").innerHTML = "";
+            document.getElementById("text5").innerHTML = "";
+            document.getElementById("text4").innerHTML = `<p>We are super excited and can’t wait to see you at the center and help you get started on your fitness journey! Here’s a few things we want you to take care of since it is your very first session with cult. BEFORE CLASS    Arrive 15 minutes early: Drop in 15 minutes early so that you can get a hang of things at the center. Center manager will be checking your body temperature, oxygen level and status on the Aarogya Setu app.We do not encourage our members to work out if they come later than 5 mins from the session start time. Eat one hour before class: Have a light, simple snack about an hour before your session. Grab a banana/bowl of oats/few almonds or nuts, it’ll charge you up and also help prevent dizziness in your initial sessions.  Bring your own kit: We do not encourage our members to workout without shoes as they protect you from common workout-related injuries. Due to COVID-19, we request you to bring your own kit: Yoga mats, Hand towel and water bottle. Weights, boxing bags and resistance bands are available at the center.  Mark your attendance: Marking your attendance is mandatory. Mark your attendance to avoid a No-Show Keep your belongings safe: Due to COVID-19, lockers are not accessible at the centers, please do not carry any valuables to the center.  DURING CLASS Inform about injuries: Let the trainer know about any injuries you may have Define your own pace: Take it easy. Complete the workouts at your own pace and whenever you feel uncomfortable, stop and let the trainer know AFTER CLASS No waiting at the centre: We deeply sanitise the center after every session. Once your workout is done, you can talk to the trainer in case of any doubts but shower facilities will not be available.  Minimize muscle soreness: You might have soreness in your muscles for 2-3 days after your first class but don’t worry, it’s absolutely normal...And strangely, it’ll feel satisfyingly great!! A good warm up and the right cool down (stretch) will minimize soreness to a large extent. A cold water shower after exercise also helps. Ideal recovery meal : Grab a meal that contains easily digestible proteins ( like a bowl of proteins) within 30 - 45mins of the workout. Avoid dairy or heavily processed protein powders. Drink 2-3 litres of water daily to replace lost fluids.</h3>`
+        }
+        function five() {
+            document.getElementById("text1").innerHTML = "";
+            document.getElementById("text2").innerHTML = "";
+            document.getElementById("text3").innerHTML = "";
+            document.getElementById("text4").innerHTML = "";
+            document.getElementById("text5").innerHTML = `<p>To ensure safety of members as well as our employees, we have made the following changes in the center facilities: Temperature & Blood oxygen level checks: Our center manager will check your body temperature, blood oxygen levels & status on Aarogya Setu app before entering the center. Please stand in the queue of boxes marked in front of your center & wait for your turn  Limited access to center facilities: Lockers and shower facilities will not be available. You can use washrooms but please wait in the queue for your turn. We request you to not bring any valuables to the center  Designated workout spots: To ensure social distancing, every member will be assigned a workout station number. Please stand in your designated station number only.  Frequent sanitisation: All the workouts will be of 40 mins duration. Equipment & workout floor will be sanitised after every session.  Weights & resistance bands will be placed in your station number. You can also self sanitise the equipment before using
+Do you find this helpful?
+YES
+NO</h3>`
+        }
+        // <----------NavbarDropDown----------------->
+            var spet = document.getElementById("spet")
+            var toggle = false;
+            //  <-----------------Eatfit dropDown topleft------------------>
+            spet.addEventListener("click", function () {
+                var headDropDown = document.getElementById("headDropDown")
+                var droparrow = document.getElementById("dropdown-arrow")
+
+                if (toggle) {
+                    headDropDown.style.display = "none"
+                    toggle = false
+                    droparrow.style.transform = "rotate(" + 180 + "deg)"
+                } else {
+                    headDropDown.style.display = "flex"
+                    toggle = true
+                    droparrow.style.transform = "rotate(" + 0 + "deg)"
+                }
+
+            })
+// <------>
+   // <---rightNavbarDropDown--->
+   var arrow = document.getElementById("image11")
+    arrow.addEventListener("click", showdata)
+    var toggle = false
+    function showdata() {
+
+        if (toggle) {
+            toggle = false
+            document.getElementById("logindata").style.display = "none";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        } else {
+            toggle = true
+            document.getElementById("logindata").style.display = "flex";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+    }
+    var hamburger = document.getElementById("hamburgericon")
+    hamburger.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="flex"
+        
+        console.log("clicking")
+    })
+    var cross = document.getElementById("cross")
+    cross.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="none"
+        
+        console.log("clicking")
+    })
+</script>

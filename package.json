@@ -1,0 +1,33 @@
+{
+  "name": "cult.fit-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon src/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lpavan6445/Cult.fitclone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lpavan6445/Cult.fitclone/issues"
+  },
+  "homepage": "https://github.com/Lpavan6445/Cult.fitclone#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
+  }
+}

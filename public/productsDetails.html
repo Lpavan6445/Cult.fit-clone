@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navFooterStyle2.css">
+    <title>Product Details</title>
+    <link rel = "icon" href ="https://static.cure.fit/assets/images/favicon-modified.png" type = "image/x-icon">
+    <style>
+        body {
+            background-color: #FFFFFF;
+            margin: 0;
+            font-family: BrandonTextWeb-Regular,Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        }
+
+        #adddiv {
+            width: 100%;
+            height: 1000px;
+            /* margin-top: 80px; */
+
+        }
+
+        #addimg1 {
+
+            display: inline-block;
+            width: 32%;
+            height: 1000px;
+            /* background-color: brown; */
+            margin-left: 1%;
+            vertical-align: top;
+        }
+
+        #addimg2 {
+
+            display: inline-block;
+            width: 32%;
+            height: 1000px;
+            margin-left: 1%;
+            vertical-align: top;
+            /* background-color: blueviolet; */
+        }
+
+        #addpro {
+
+            display: inline-block;
+            width: 30%;
+            height: 1000px;
+            /* margin-left: 1%; */
+            /* background-color: aquamarine; */
+            /* margin-top: 20px; */
+            vertical-align: top;
+            padding: 18px;
+        }
+
+        #imgfirstdivi {
+            width: 100%;
+            /* height: 480px; */
+            margin-bottom: 30px;
+        }
+
+        #imgfirstdivi1 {
+            width: 100%;
+            /* height: 480px; */
+        }
+
+        #imgfirstdivii {
+            width: 100%;
+            /* height: 480px; */
+        }
+
+        #imgfirstdivi2 {
+            width: 100%;
+            /* height: 480px; */
+        }
+
+        #imgfirstdivse {
+            width: 100%;
+            /* height: 480px; */
+            margin-bottom: 30px;
+        }
+
+        #imgfirstdivseci1 {
+            width: 100%;
+            /* height: 480px; */
+        }
+
+        #imgfirstdivsec {
+            width: 100%;
+            /* height: 480px; */
+        }
+
+        #imgfirstdivseci2 {
+            width: 100%;
+            height: 505px;
+        }
+
+        #selsectsize {
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-evenly;
+        }
+
+        .selectsizebtn {
+            border: 1px solid #FFFFFF;
+            background-color: #FFFFFF;
+            width: 50px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        .selectsizebtn:hover {
+            border: 1px solid goldenrod;
+        }
+
+
+        #cartbtn {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #addcart {
+            width: 45%;
+            /* height: 50px;  */
+            border: none;
+            border-radius: 52px;
+            background: #ff385a;
+            background-image: linear-gradient(265deg, #fd2f6e, #f7433c);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            padding: 13px 0;
+            cursor: pointer;
+        }
+
+        #viewcart {
+            width: 45%;
+            /* height: 50px;  */
+            border: none;
+            border-radius: 52px;
+            background: #ff385a;
+            background-image: linear-gradient(265deg, #fd2f6e, #f7433c);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            padding: 13px 0;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+    
+
+        #listmai {
+            margin-left: 30px;
+            color: slategray;
+        }
+
+        #lil {
+            width: 100%;
+            border: .5px solid silver;
+            height: .5px;
+        }
+
+        #sech {
+            width: 100%;
+            border: .5px solid silver;
+        }
+
+        .smlit {
+            color: silver;
+            margin-left: 30px;
+        }
+
+        .newhr {
+            background-color: silver;
+        }
+
+        #Nikfooter {
+            margin-top: 200px;
+            background-color: black;
+            width: 100%;
+            height: 350px;
+            display: flex;
+        }
+
+        #footerd1 {
+            width: 37%;
+            height: 100%;
+        }
+
+        #footerd1I {
+            width: 30%;
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+
+        #footerd1P {
+            margin-left: 17%;
+            margin-top: 5%;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #a2a2a2;
+        }
+
+        #footerd2 {
+            width: 20%;
+            height: 100%;
+        }
+
+        .nikContact {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.94;
+            letter-spacing: normal;
+            list-style: none;
+            margin-left: 20%;
+        }
+
+        #footerd3 {
+            width: 20%;
+            height: 100%;
+        }
+
+        #footerd4 {
+            /* width: 20%; */
+            height: 100%;
+        }
+
+        .nikContact1 {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.94;
+            letter-spacing: normal;
+            list-style: none;
+            margin-left: 15%;
+            margin-top: 10%;
+        }
+        #adddiv img{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<div id="navbar">
+        
+</div>
+<div id="chiDiv">
+
+</div>
+<div id="adddiv">
+    <div id="addimg1">
+        <div id="imgfirstdivi">
+            <img id="imgfirstdivi1"
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_500,ar_4:5,c_fill/dpr_2/cultgear-content/tRRAtQdBtjQerGgzWUsDN6EJ" />
+        </div>
+        <div id="imgfirstdivii">
+            <img id="imgfirstdivi2"
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_500,ar_4:5,c_fill/dpr_2/cultgear-content/djrqqMghG463zw96JhfpookV" />
+        </div>
+
+    </div>
+    <div id="addimg2">
+        <div id="imgfirstdivse">
+            <img id="imgfirstdivseci1"
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_500,ar_4:5,c_fill/dpr_2/cultgear-content/6nP9LXu5LiSYFjBP3Jg1CKi5" />
+        </div>
+        <div id="imgfirstdivsec">
+            <img id="imgfirstdivseci2" src="https://dailyasianage.com/library/1562441950_4.jpg" />
+        </div>
+    </div>
+    <div id="addpro">
+        <div>
+            <p>CULTSPORT</p>
+            <h1 id="title">Supersoft Yoga Tshirt</h1>
+            <span id="price" style="font-size: 20px ;font-size: 22px;
+            font-weight: 700;color: rgb(241,49,113);"> ₹ 800</span>
+            <span style="    color: #fff;
+            background: rgb(245,166,35);
+            padding: 5px 10px;
+            line-height: 34px;"> 45% off</span>
+        </div>
+        <div>
+            <p>Feel grounded as you stretch and reach for the sky with the MadeforYoga T-shirt.
+                The bio washed cotton prioritizes your comfort while the breathable supersoft fabric that will help
+                minimize distractions.</p>
+        </div>
+        <div>
+            <span> Choose Size </span> <span style="color: #F13171; margin-left: 10px; font-size: small;">(Size
+                Guide)</span>
+            <div id="selsectsize">
+                <button class="selectsizebtn">S</button>
+                <button class="selectsizebtn">M</button>
+                <button class="selectsizebtn">L</button>
+                <button class="selectsizebtn">XL</button>
+                <button class="selectsizebtn">XXL</button>
+            </div>
+            <div id="cartbtn">
+                <button id="addcart">Add to Cart</button>
+                <button id="viewcart">View Cart</button>
+            </div>
+        </div>
+        <div id="prodet">
+            <h3>PRODUCT DETAILS</h3>
+            <div id="listmai">
+                <li>Color: Teal</li>
+                <li>Fabric: 95% Supima Cotton 5% Spandex</li>
+                <li> Breathable fabric</li>
+                <li> supersoft</li>
+            </div>
+
+        </div>
+        <hr id="lil">
+        <div>
+            <p>Enter Pincode</p>
+        </div>
+        <hr id="sech">
+        <div id="lisec">
+            <li class="smlit">Free delivery within 5-7 days</li>
+            <li class="smlit">Easy 30 days return available</li>
+            <li class="smlit">30 days exchange available</li>
+            <li style="margin-left: 30px; font-size: 13px;">To minimise contact between you and the delivery partner,
+                Pay on Delivery
+                option is temporarily
+                disabled.</li>
+        </div>
+        <hr class="newhr">
+        <div>
+            <h3>Fabric</h3>
+            <li class="smlit">95% Cotton 5% Spandex</li>
+        </div>
+        <hr class="newhr">
+        <div>
+            <h3>Material and Care</h3>
+            <li class="smlit">Color: Teal</li>
+            <li class="smlit">Fabric: 95% Supima Cotton 5% Spandex</li>
+            <li class="smlit">Breathable fabric</li>
+            <li class="smlit">Supersoft</li>
+        </div>
+    </div>
+
+
+    <!-------------------------------- footer part ------------------------------------->
+    <div id="Nikfooter">
+        <div id="footerd1">
+            <img id="footerd1I" src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="">
+            <p id="footerd1P">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy
+                with yoga & meditation, and
+                medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
+        </div>
+        <div id="footerd2">
+            <p style="margin-top: 10%;" class="nikContact">CONTACT US</p>
+            <p class="nikContact">BLOG</p>
+            <p class="nikContact">PARTNER.FIT</p>
+            <p class="nikContact">TALKS</p>
+            <P class="nikContact">CAREERS</P>
+        </div>
+        <div id="footerd3">
+            <p class="nikContact1">CULTFIT FOR BUSINESSES</p>
+            <p class="nikContact1">CULT FRANCHISE</p>
+            <p class="nikContact1">CULT PASS NETWORK</p>
+            <P class="nikContact1">CORPORATE PARTNERSHIPS</P>
+        </div>
+        <div id="footerd4"></div>
+
+        <!-- app store part -->
+        <div id="footerd4">
+            <a href="https://apps.apple.com/us/app/cure-fit/id1217794588">
+                <img style="margin-left: 25%;margin-top: 20%;" src="https://static.cure.fit/assets/images/app-store.svg"
+                    alt="">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=fit.cure.android">
+                <img style="margin-left: 25%;margin-top: 10%;"
+                    src="https://static.cure.fit/assets/images/play-store.svg" alt="">
+            </a>
+        </div>
+    </div>
+    <div style="display: flex;color: whitesmoke;margin-top: -50px;" id="smallContact">
+        <p style="margin-left: 5%;">CONTACT US</p>
+        <p style="margin-left: 5%;">FAQ</p>
+        <p style="margin-left: 5%;">Terms & conditions</p>
+        <p style="margin-left: 5%;">Privacy Policy</p>
+        <p style="margin-left: 5%;">Refund Policy</p>
+        <a href="https://www.facebook.com/cultfitofficial">
+            <img style="margin-left: 260px;margin-top: 10px;"
+                src="https://static.cure.fit/assets/images/facebook_icon_white.svg" alt="">
+        </a>
+        <a href="https://twitter.com/cultfitOfficial">
+            <img style="margin-left: 30px;margin-top: 10px;"
+                src="https://static.cure.fit/assets/images/twitter_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/cultfitOfficial/">
+            <img style="margin-left: 30px;margin-top: 10px;"
+                src="https://static.cure.fit/assets/images/instagram_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg">
+            <img style="margin-left: 30px;margin-top: 10px;"
+                src="https://static.cure.fit/assets/images/youtube_icon_white_1.svg" alt="">
+        </a>
+    </div>
+</div>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module">
+        import {navbar,footer} from "./navFoot.js"
+        var nav = document.getElementById("navbar")
+        nav.innerHTML = navbar()
+        var spet = document.getElementById("spet")
+         var toggle = false;
+        spet.addEventListener("click",function(){
+           var headDropDown = document.getElementById("headDropDown")
+           var droparrow = document.getElementById("dropdown-arrow")
+           
+           if(toggle){
+
+            headDropDown.style.display = "none"
+            toggle = false
+            droparrow.style.transform = "rotate("+180+"deg)"
+           }else{
+            headDropDown.style.display = "flex"
+            toggle = true
+            droparrow.style.transform = "rotate("+0+"deg)"
+           }
+       })
+
+
+ var data = JSON.parse(localStorage.getItem('productDetails'))
+    var img1 = document.getElementById("imgfirstdivi1")
+    img1.src = data[0].image1
+
+    var img2 = document.getElementById("imgfirstdivi2")
+    img2.src = data[0].image2
+
+    var img3 = document.getElementById("imgfirstdivseci1")
+    img3.src = data[0].image3
+
+    var title = document.getElementById("title")
+    title.innerHTML = data[0].name
+
+    var price = document.getElementById("price")
+    price.innerHTML = `₹ ${data[0].price}`
+
+
+
+    // var cartData=JSON.parse(localStorage.getItem('addnik'))||[];
+    var addcart = document.getElementById("addcart")
+    addcart.addEventListener("click", function () {
+         console.log(data[0]._id)
+    //    cartData.push(data[0])
+       alert("Product added successfully")
+       var response = axios.post(`http://localhost:2345/cart/add`,{cartProdaddedId:data[0]._id})
+        // localStorage.setItem("addnik", JSON.stringify(cartData))
+    })
+
+    var viewcart = document.getElementById("viewcart")
+    viewcart.addEventListener("click",function(){
+        window.location.href = "cartpage.html"
+    })
+    // <---------------------Cart Page------------------------>
+        // var cartData=JSON.parse(localStorage.getItem('addnik'))||[];
+        // console.log(cartData);
+      var storedata;
+      var eatdata ;
+     let cart=document.getElementById("cartNik")
+     var toggle = false;
+       cart.addEventListener("click",function (){
+        console.log("clicked")
+           if(toggle){
+               toggle = false;
+                chiDiv.style.display = "none"
+           }else{
+               toggle = true;
+               chiDiv.style.display = "block"
+
+               var response = axios.get(`http://localhost:2345/cart/store`)
+                .then(function(response){
+                    storedata =response.data;
+                    myFuncN(storedata,"store")
+                }).catch(function (error) {
+                    console.log(error);
+                })
+             
+                var response = axios.get(`http://localhost:2345/cart/eat`)
+                .then(function(response){
+                    eatdata =response.data
+                }).catch(function (error) {
+                    console.log(error);
+                })
+           }
+         
+       });
+    // myFuncN(cartData)
+    let scrollN;
+    let divN;
+    let buttonCart;
+    let psize;
+    let res;
+    function myFuncN(cartData,type){
+        document.getElementById("chiDiv").innerHTML=null
+          divN = document.createElement("div")
+        divN.setAttribute("id", "divspi");
+
+        let pN = document.createElement("p");
+        pN.textContent = "Your Cart";
+        pN.id="pN"
+
+        divN.append(pN)
+
+
+
+        // ==================================================
+
+        let divFlexN = document.createElement("div");
+        divFlexN.setAttribute("id", "divFlexN")
+
+        let Np4Div = document.createElement("div")
+        Np4Div.style.marginLeft = "50px"
+        let Np4 = document.createElement("p")
+        Np4.textContent = "Store"
+       
+        Np4Div.append(Np4)
+
+        let Np1Div = document.createElement("div")
+        Np1Div.style.marginLeft = "27px"
+        let Np1 = document.createElement("p");
+        Np1.textContent = "labtests"
+
+        Np1Div.append(Np1)
+         
+        
+
+        let Np2Div = document.createElement("div")
+        Np2Div.style.marginLeft = "50px"
+        let Np2 = document.createElement("p")
+        Np2.textContent = "Eatfit"
+       
+        Np2Div.append(Np2)
+
+        let Np3Div = document.createElement("div")
+        Np3Div.style.marginLeft = "50px"
+        let Np3 = document.createElement("p")
+        Np3.textContent = "Wholefit"
+        Np3Div.append(Np3)
+
+        
+
+        divFlexN.append(Np4Div,Np2Div, Np3Div, Np1Div)
+
+        divN.append(divFlexN)
+
+        Np2.addEventListener("click", function(){
+            // scrollN.style.display="none"
+            // myFuncN(eatdata)
+            res = axios.get(`http://localhost:2345/cart/eat`)
+            .then(function(res){
+                eatdata = res.data
+                myFuncN(eatdata,"eat")
+            }).catch(function (error) {
+                console.log(error);
+            })
+            // scrollN2.style.display="block"
+        })
+        Np4.addEventListener("click",function (){
+            // scrollN.style.display="none"
+            res = axios.get(`http://localhost:2345/cart/store`)
+            .then(function (res) {
+                storedata =res.data
+                myFuncN(storedata,"store")
+            }).catch(function (er){
+                    console.log(er)
+            })
+            // scrollN.style.display="block"
+        })
+        if(type === "store"){
+            storecart(cartData)
+        }else if(type === "eat"){
+            eatcart(cartData)
+        }
+        
+   }
+   function storecart(cartData){
+    scrollN=document.createElement("div")
+        scrollN.setAttribute("id","scrollN")
+
+   divN.append(scrollN)
+       let buttonCart = document.createElement("button")
+        buttonCart.setAttribute("id", "buttonCart")
+        buttonCart.style.cursor = "pointer";
+        buttonCart.addEventListener("click",function(){
+            window.location.href="cartpage.html"
+        })
+       var Total=0;
+       var quantity=0;
+        cartData.forEach(function(nik,index){
+            console.log(nik);
+            Total += (+nik.price);
+            quantity++;
+              let countcart = 1;
+
+       
+             
+            // ===================================
+
+            let disDiv = document.createElement("div");
+            disDiv.setAttribute("id", "disDiv")
+           
+            // =====================
+
+            let disDivCon = document.createElement("div");
+            disDivCon.setAttribute("id", "disDivCon")
+            // =============================
+
+            let con1 = document.createElement("div");
+
+            let imgcART = document.createElement("img");
+            imgcART.src = nik.image1
+            imgcART.setAttribute("id", "imgcART")
+
+            con1.append(imgcART)
+
+
+            // =============================
+            let con2 = document.createElement("div");
+
+            let deleteProd = document.createElement("img")
+            deleteProd.id ="deleteProd"
+             deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
+             deleteProd.addEventListener("click", function (index) {
+                console.log(nik["_id"])
+                axios.delete(`http://localhost:2345/cart/store/${nik["_id"]}`)
+                .then(function(res){
+                    res = axios.get(`http://localhost:2345/cart/store`)
+                    .then(function (res) {
+                        storedata =res.data
+                        myFuncN(storedata,"store")
+                    }).catch(function (er){
+                            console.log(er)
+                    })
+                    console.log(res)
+                }).catch(function (error) {
+                    console.log(error);
+                })
+                
+                
+    
+            })
+            
+            let pprod = document.createElement("p");
+            pprod.textContent = nik.name
+            pprod.id = "pprod"
+
+
+            psize = document.createElement("p");
+            psize.textContent = nik.color;
+            psize.id="psize"
+
+            let collection = document.createElement("div")
+            collection.style.display = "flex"
+            collection.style.marginRight = "30px"
+
+
+
+            let pprice = document.createElement("p");
+            pprice.textContent =nik.price
+
+            let quant = document.createElement("div")
+            quant.setAttribute("id", "quant")
+
+            let minus = document.createElement("img")
+            minus.src = "https://static.cure.fit/assets/images/minus.svg"
+            minus.style.width = "15px";
+            minus.style.marginLeft = "10px"
+            minus.style.cursor = "pointer"
+            minus.addEventListener("click", countfunc)
+
+            function countfunc() {
+                if (countcart == 0) {
+                    return
+                }
+                else {
+                    countcart--
+                    Total -= (+nik.price);
+                    quantity--;
+                     buttonCart.textContent = `${quantity} items • ${Total}`;
+                    console.log(countcart);
+                    countshow.textContent = countcart
+                }
+
+            }
+
+            let countshow = document.createElement("p")
+            countshow.textContent = countcart
+            countshow.setAttribute("id", "countshow")
+
+
+            let plus = document.createElement("img")
+            plus.src = "https://static.cure.fit/assets/images/plus.svg";
+            plus.style.width = "15px"
+            plus.style.cursor ="pointer"
+            plus.addEventListener("click", countfunc2);
+
+
+            function countfunc2() {
+                console.log(countcart);
+                countcart++
+                  Total += (+nik.price);
+                  quantity++;
+                buttonCart.textContent = `${quantity} items  •${Total}`;
+
+                countshow.textContent = countcart
+
+            }
+
+            let hr = document.createElement("hr")
+
+            quant.append(minus, countshow, plus)
+
+            collection.append(pprice, quant)
+
+            con2.append(deleteProd,pprod, psize, collection)
+
+
+            disDivCon.append(con1, con2)
+
+            disDiv.append(disDivCon, hr)
+
+            scrollN.append(disDiv)
+
+
+            document.getElementById("chiDiv").append(divN)
+
+        });
+
+        // let buttonCart = document.createElement("button")
+        // buttonCart.setAttribute("id", "buttonCart")
+        buttonCart.textContent = `${quantity} items  •${Total}`;
+         document.getElementById("chiDiv").append(buttonCart)
+
+   }
+   //  <----------------Eat----------------->
+
+   function eatcart(cartData){
+     scrollN=document.createElement("div")
+     scrollN.setAttribute("id","scrollN")
+
+ divN.append(scrollN)
+        buttonCart = document.createElement("button")
+        buttonCart.setAttribute("id", "buttonCart")
+        buttonCart.style.cursor = "pointer";
+        buttonCart.addEventListener("click",function(){
+            window.location.href="cartpage.html"
+        })
+       var Total=0;
+       var quantity=0;
+        cartData.forEach(function(nik,index){
+            console.log(nik);
+            Total += (+nik.price);
+            quantity++;
+              let countcart = 1;
+
+       
+             
+            // ===================================
+
+            let disDiv = document.createElement("div");
+            disDiv.setAttribute("id", "disDiv")
+           
+            // =====================
+
+            let disDivCon = document.createElement("div");
+            disDivCon.setAttribute("id", "disDivCon")
+            // =============================
+
+            let con1 = document.createElement("div");
+
+            let imgcART = document.createElement("img");
+            imgcART.src = nik.strMealThumb
+            imgcART.setAttribute("id", "imgcART")
+
+            con1.append(imgcART)
+
+
+            // =============================
+            let con2 = document.createElement("div");
+
+            let deleteProd = document.createElement("img")
+            deleteProd.id ="deleteProd"
+             deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
+             deleteProd.addEventListener("click", function (index) {
+                console.log(nik["_id"])
+                axios.delete(`http://localhost:2345/cart/eat/${nik["_id"]}`)
+                .then(function(res){
+                    console.log(res)
+                    res = axios.get(`http://localhost:2345/cart/eat`)
+                    .then(function(res){
+                        eatdata = res.data
+                        myFuncN(eatdata,"eat")
+                    }).catch(function (error) {
+                        console.log(error);
+                    })
+                }).catch(function (error) {
+                    console.log(error);
+                })
+                
+                
+            })
+            
+            let pprod = document.createElement("p");
+            pprod.textContent = nik.strMeal
+            pprod.id = "pprod"
+
+
+            // let psize = document.createElement("p");
+            // psize.textContent = nik.color;
+            // psize.id="psize"
+
+            let collection = document.createElement("div")
+            collection.style.display = "flex"
+            collection.style.marginRight = "30px"
+
+
+
+            let pprice = document.createElement("p");
+            pprice.textContent =nik.price
+
+            let quant = document.createElement("div")
+            quant.setAttribute("id", "quant")
+
+            let minus = document.createElement("img")
+            minus.src = "https://static.cure.fit/assets/images/minus.svg"
+            minus.style.width = "15px";
+            minus.style.marginLeft = "10px"
+            minus.style.cursor = "pointer"
+            minus.addEventListener("click", countfunc)
+
+            function countfunc() {
+                if (countcart == 0) {
+                    return
+                }
+                else {
+                    countcart--
+                    Total -= (+nik.price);
+                    quantity--;
+                     buttonCart.textContent = `${quantity} items • ${Total}`;
+                    console.log(countcart);
+                    countshow.textContent = countcart
+                }
+
+            }
+
+            let countshow = document.createElement("p")
+            countshow.textContent = countcart
+            countshow.setAttribute("id", "countshow")
+
+
+            let plus = document.createElement("img")
+            plus.src = "https://static.cure.fit/assets/images/plus.svg";
+            plus.style.width = "15px"
+            plus.style.cursor ="pointer"
+            plus.addEventListener("click", countfunc2);
+
+
+            function countfunc2() {
+                console.log(countcart);
+                countcart++
+                  Total += (+nik.price);
+                  quantity++;
+                buttonCart.textContent = `${quantity} items  •${Total}`;
+
+                countshow.textContent = countcart
+
+            }
+
+            let hr = document.createElement("hr")
+
+            quant.append(minus, countshow, plus)
+
+            collection.append(pprice, quant)
+
+            con2.append(deleteProd,pprod, psize, collection)
+
+
+            disDivCon.append(con1, con2)
+
+            disDiv.append(disDivCon, hr)
+
+            scrollN.append(disDiv)
+
+
+            document.getElementById("chiDiv").append(divN)
+        
+        });
+        buttonCart.textContent = `${quantity} items  •${Total}`;
+         document.getElementById("chiDiv").append(buttonCart)
+    
+}
+        // let buttonCart = document.createElement("button")
+        // buttonCart.setAttribute("id", "buttonCart")
+            
+        var arrow = document.getElementById("image11")
+    arrow.addEventListener("click", showdata)
+    var toggle = false
+    function showdata() {
+
+        if (toggle) {
+            toggle = false
+            document.getElementById("logindata").style.display = "none";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        } else {
+            toggle = true
+            document.getElementById("logindata").style.display = "flex";
+            // arrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+    }
+    </script>
+
+</body>
+
+</html>

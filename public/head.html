@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+      
+/* <------------SmallScreen NAvbar----------------> */
+#hamburgericon{
+    padding:10px;
+}
+#hamburgericon>div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    z-index: 1;
+}
+#smallScreenNav{
+    display: none;
+    position:sticky;
+    transition: all 1s ease 1s;
+}
+#dropdownNav{
+    display: none;
+    display:flex;
+    flex-direction: column;
+    width: 50vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(34, 34, 34);
+    padding-top: 30px;
+     max-width: 350px;
+     transition: all 1s ease 1s;
+}
+#cross>.fa-times{
+    color:white;
+    font-size: 38px;
+    position: absolute;
+    top:20px;
+    right: 30px;
+    
+}
+#cultlogodis>img{
+    width: 100px;
+    margin-bottom: 30px;
+    padding-left: 3px;
+}
+#navPages{
+    display:flex;
+    flex-direction:column;
+    color: white;
+
+} 
+#navPages>div{
+    width:100%;
+    /* text-align:center; */
+    padding: 20px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* border-top: 1px solid white; */
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+#navPages>div>a{
+    text-decoration: none;
+    color: white;
+}
+#downLogin{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    color: white;
+    
+}
+#downLogin>div{
+    width:100%;
+    text-transform: none;
+    /* padding: 20px 20px 20px 0px; */
+    font-size: 15px;
+    padding: 15px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    /* font-weight: bold; */
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* /* max-width: 350px; */
+}
+    </style>
+</head>
+<body>
+    <div id="smallScreenNav">
+        <div id="hamburgericon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="dropdownNav">
+            <div id="cultlogodis">
+                <img src="https://static.cure.fit/assets/images/curefit-v-man-white.svg" alt="user-image" class=" style-prefix-2jfr04 efaomd31" loading="lazy" width="40" height="45.45454545454545">
+            </div>
+            <div id="cross">
+                <i class="fas fa-times"></i>
+            </div>
+             <div id="navPages">
+                   <div>Home</div>
+                   <div>CULT</div>
+                   <div>LIVE</div>
+                   <div>CARE</div>
+                   <div>MIND</div>
+                   <div>STORE</div>
+                   <div>EAT</div>
+                  
+             </div>
+             <div id="downLogin">
+                <div>SignIn</div>
+                <div>Cart</div>
+                <div>LogOut</div>
+           </div>
+        </div>
+    </div>
+</body>
+<script>
+    var hamburger = document.getElementById("hamburgericon")
+    hamburger.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="flex"
+        
+        console.log("clicking")
+    })
+    var cross = document.getElementById("cross")
+    cross.addEventListener("click",()=>{
+        var dropNav = document.getElementById("dropdownNav")
+        dropNav.style.display="none"
+        
+        console.log("clicking")
+    })
+</script>
+</html>

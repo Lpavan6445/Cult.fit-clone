@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/53cdcb7507a23013519313393248b9bd?family=BrandonTextWeb-Bold" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="navFooterStyle.css">
+    <link href="//db.onlinewebfonts.com/c/47b83f8dbd3bf93e0df5674b32c6a7e4?family=BrandonTextWeb-Regular"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <title>Mind</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+        }
+
+
+        /* _____________navcssadded________________________ */
+        /* _______________________________________navbar__________________________________________________ */
+        /* #navbar {
+            display: flex;
+            width: 92.5%;
+            height: 70px;
+            background-color: #FFFFFF;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0 4%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+        }
+
+
+        
+        #navimg {
+            margin-top: 15px;
+            width: 40px;
+            height: 40px;
+            margin-right: 30px;
+        } */
+
+
+
+        #firsti {
+            width: 100%;
+            height: 100px;
+        }
+
+        #secondi {
+            width: 100%;
+            height: 300px;
+        }
+
+        #clock {
+            width: 100%;
+            height: 60px;
+            background-color: #ECECEC;
+            color: black;
+            text-align: center;
+            font-size: 40px;
+            margin: auto;
+        }
+
+        #thirdi {
+            width: 75%;
+            margin-left: 12.5%;
+            height: 75px;
+            margin-top: 20px;
+        }
+
+        #cont_2 {
+            width: 75%;
+            margin-left: 12.5%;
+            /* background-color: aqua; */
+            height: 1000px;
+            margin-top: 50px;
+        }
+
+        #fourimg {
+            display: grid;
+            grid-template-columns: repeat(2, 48%);
+        }
+
+        .iamimg {
+            height: 200px;
+            width: 98%;
+            /* background-color: blue; */
+            margin-left: 3%;
+            margin-bottom: 45px;
+
+            border-radius: 10px;
+        }
+
+        #fouri {
+            width: 75%;
+            margin-left: 12.5%;
+            height: 140px;
+            margin-top: 50px;
+        }
+
+        #fiveya {
+            width: 95%;
+            height: 550px;
+            margin-top: 50px;
+            background-color: #CBE6FF;
+            padding: 30px;
+        }
+
+        #fh1 {
+            text-align: center;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+
+        #fh2 {
+            text-align: center;
+            color: rgb(136, 166, 217);
+        }
+
+        #isetitem {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        hr {
+            width: 300px;
+            height: .1px;
+            margin-top: 30px;
+            color: #616263;
+        }
+
+        #isetitem2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .smallig {
+            display: flex;
+        }
+
+
+
+        .smalligimg {
+            width: 20px;
+            height: 20px;
+            margin-top: 20px;
+            margin-right: 5px;
+        }
+
+        .col {
+            color: #616263;
+            margin-top: 20px;
+        }
+
+        #eighti {
+            display: flex;
+            width: 50%;
+            height: 220px;
+            /* background-color: #ECECEC; */
+            margin-left: 10%;
+        }
+
+        .ninei {
+            display: block;
+            width: 30%;
+            margin: auto;
+        }
+
+        .nineione {
+
+            width: 100%;
+            height: 100px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            margin-left: 10px;
+        }
+
+        .nineitwo {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(216, 232, 255);
+            border-radius: 8px;
+            margin-top: 3px;
+            margin-left: 10px;
+        }
+
+        #fivei {
+            width: 100%;
+            height: 130px;
+        }
+
+        #sixi {
+            width: 100%;
+        }
+
+        #seveni {
+            width: 100%;
+        }
+
+        .childfour {
+            position: relative;
+            z-index: -1;
+        }
+
+        .childfour1 {
+            margin-left: 30px;
+            width: 60%;
+            font-size: 14px;
+            position: absolute;
+            top: 0%
+        }
+
+        .childfour hr {
+            width: 15px;
+            height: 2px;
+            color: #616263;
+            background-color: #616263;
+            margin-right: 80%;
+        }
+
+        #faqi {
+            width: 100%;
+            height: 900px;
+            background-color: #F2F4F8;
+            /* text-align: center; */
+            margin: auto;
+        }
+
+        .fabutton {
+            width: 70%;
+            color: #616263;
+            border: none;
+            background: none;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        .fabuttonhh {
+            width: 90%;
+        }
+
+        #text1 {
+            color: #a9a9a9;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        #text2 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text3 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text4 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text5 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text6 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #text7 {
+            width: 50%;
+            margin-left: 25%;
+            color: #a9a9a9;
+        }
+
+        #Nikfooter {
+            background-color: black;
+            width: 100%;
+            height: 350px;
+            display: flex;
+        }
+
+        #footerd1 {
+            width: 37%;
+            height: 100%;
+        }
+
+        #footerd1I {
+            width: 30%;
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+
+        #footerd1P {
+            margin-left: 17%;
+            margin-top: 5%;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #a2a2a2;
+        }
+
+        #footerd2 {
+            width: 20%;
+            height: 100%;
+        }
+
+        .nikContact {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.94;
+            letter-spacing: normal;
+            list-style: none;
+            margin-left: 20%;
+        }
+
+        #footerd3 {
+            width: 20%;
+            height: 100%;
+        }
+
+        #footerd4 {
+            /* width: 20%; */
+            height: 100%;
+        }
+
+        .nikContact1 {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.94;
+            letter-spacing: normal;
+            list-style: none;
+            margin-left: 15%;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="headerDropDown" id="headDropDown">
+            <div class="dropDownElem">
+                <div onclick="cult.html" class="image-wrapper ">
+                    <img alt="" src="https://static.cure.fit/assets/images/cult-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CULT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/Livefit.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    LIVE
+                </div>
+            </div>
+            <div onclick="window.location.href='./EAT/eatordernow.html'" class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/eat-hover-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    EAT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/mind-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    MIND
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/carefit-pink.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CARE
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/store-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    STORE
+                </div>
+            </div>
+        </div>
+        <!-----Navbar----------->
+        <div class="headerDropDown" id="headDropDown">
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/cult-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CULT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/Livefit.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    LIVE
+                </div>
+            </div>
+            <div onclick="window.location.href='./EAT/eatordernow.html'" class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/eat-hover-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    EAT
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/mind-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    MIND
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/carefit-blk.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    CARE
+                </div>
+            </div>
+            <div class="dropDownElem">
+                <div class="image-wrapper " style="">
+                    <img alt="" src="https://static.cure.fit/assets/images/store-icon.svg">
+                </div>
+                <div class="css-1daiy-toolTipContent">
+                    STORE
+                </div>
+            </div>
+        </div>
+        <div id="innerNavbar">
+            <div id="logo" class="logo">
+                <a href="logout.html">
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg" alt="cult fit logo">
+                </a>
+                <div id="spet">
+
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/mindfit.svg"
+                        alt="eat" class=" css-130q1oe-ImageElement efaomd31" loading="lazy" width="66.66"
+                        height="19.999999999999996">
+                    <img id="dropdown-arrow" class="dropdownarrow"
+                        src="https://static.cure.fit/assets/images/arrow-clp.svg" alt="Expand menu"
+                        style="transform: rotate(180deg); min-height: 15px; min-width: 15px;">
+                </div>
+            </div>
+            <div id="eatSubpages">
+                <div>
+                    <ul>
+                        <li id="order"><a href="care.html">Therapy</a></li>
+                        <li><a href="">Mindfulness</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div id="user-details" class="user-details">
+                <div id="location" class="location">
+
+                    <div id="blue-dot" class="blue-dot"></div>
+                    <div id="cityName" class="cityName">Bangalore</div>
+                </div>
+                <div id="profile">
+                    <img src="https://profile-pictures-prod.s3.amazonaws.com/5491b50b-b284-490f-a55d-db97431b1e32"
+                        style="max-width:100%;max-height:90%">
+                </div>
+                <div id="logged-out" class="logged-out">
+                    <div>
+                        <img id="image11" src="https://cdn-icons-png.flaticon.com/512/25/25623.png" />
+                    </div>
+
+                    <div id="logindata">
+
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/profile-icon.svg" />
+                            <a class="allat">Profile</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/cart-black.svg" />
+                            <a class="allat">Orders</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/health-profile-black.svg" />
+                            <a class="allat">Medical Records</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/combined-shape-black.svg" />
+                            <a class="allat">Active Packs</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/coupon-black.svg" />
+                            <a class="allat">Redeem Vouchers</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/settings-black.svg" />
+                            <a class="allat">Account</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/support-black.svg" />
+                            <a class="allat">Support</a>
+                        </div>
+                        <div id="list">
+                            <img class="imgall" src="https://static.cure.fit/assets/images/logout-black.svg" />
+                            <a class="allat" href="">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="cart" class="cart">
+                    <img id="cartNik" src="https://static.cure.fit/assets/images/cart-image.svg" alt="cart logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chiDiv"></div>
+    <!-- ----------------------------navadded-------------------------- -->
+    <div>
+        <img id="firsti"
+            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:150/dpr_2/image/vm/07232c4b-8738-4c15-a7d0-9fa7f9d84545.png" />
+        <img id="secondi"
+            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/eb9b81c1-8304-4351-b185-ad1c3b1f50ca.png" />
+        <div id="clock"></div>
+        <img id="thirdi"
+            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/6b3f0355-7178-4898-b4e8-d68b07a43bd6.png" />
+    </div>
+    <div id="cont_2">
+        <h2 style="margin-left: 25px;">EXPERTS TO HELP YOU</h2>
+        <div id="fourimg">
+            <div class="childfour"> <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/9355d11a-f088-4f10-b9df-72ea3ecf8e0b.png" />
+
+                <div class="childfour1">
+                    <h2>Therapy</h2>
+                    <hr>
+                    <p>Experts who help solve emotional problems ₹599</p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/9ce1d9a2-d3c6-4a19-91bd-028d52f58c84.png" />
+                <div class="childfour1">
+                    <h2>Couple Therapy</h2>
+                    <hr>
+                    <p> Resolve emotional conficts in relatonships and marriage ₹750</p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/5e9f8ee5-83dd-4dca-beca-61885323ce3c.png" />
+
+
+                <div class="childfour1">
+                    <h2>COVID Stress</h2>
+                    <hr>
+                    <p>Seek expert help form our therapists for coping with isolation COVID-related stress and worry
+                        ₹599</p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/84248218-f8c0-44d8-b2d6-be415b742b9a.png" />
+
+
+                <div class="childfour1">
+                    <h2>Better sleep</h2>
+                    <hr>
+                    <p>consult with experts to learn effective strategies for restful sleep and good sleep healthy ₹599
+                    </p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/dcd1728e-d7dc-4952-b552-b1b1c97e9ac1.png" />
+
+                <div class="childfour1">
+                    <h2>Rise to Confidence</h2>
+                    <hr>
+                    <p>Grow into a more confident and self-assured you by talking to our experts ₹599</p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/18a8d3b2-d262-4f78-908b-79a55a40ef68.png" />
+                <div class="childfour1">
+                    <h2>Thrive at work</h2>
+                    <hr>
+                    <p>Make work fulfilling and meaningful with the help of our experts ₹599</p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/1a2d8f7e-2c24-4cbf-88be-e2cf266dfa23.png" />
+                <div class="childfour1">
+                    <h2>Healthy Relationships</h2>
+                    <hr>
+                    <p>Understand Your relationdhip patterns and exploring healthy ways of connecting ₹599 </p>
+                    <p>50 Mins Session</p>
+                </div>
+            </div>
+            <div class="childfour">
+                <img class="iamimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_580,ar_2.279,c_fit/dpr_2/image/vm/aebc57c2-ee58-41f7-a854-00fb5c5d55f9.png" />
+                <div class="childfour1">
+                    <h2>Transform Your Thinking</h2>
+                    <hr>
+                    <p>Manage negative or anxious thoughts or overthinking ₹599 </p>
+                    <p>50 Mins Session</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img id="fouri"
+        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:200/dpr_2/image/vm/4cb47d66-ed1a-4d40-b42b-db27b77d2258.png" />
+
+    <div id="fiveya">
+        <h1 id="fh1">ONLINE CONSULTATION</h1>
+        <h3 id="fh2">ONLINE CONSULTATION</h3>
+        <div id="isetitem">
+            <hr>
+            <h3>Why Buy a Pack ?</h3>
+            <hr>
+        </div>
+        <div id="isetitem2">
+            <div class="smallig">
+                <img class="smalligimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/mind/check_small.png" />
+                <p class="col">Packs tailoerd to your needs</p>
+            </div>
+            <div class="smallig">
+                <img class="smalligimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/mind/check_small.png" />
+                <p class="col">
+                    Hassle-free regular care
+                </p>
+            </div>
+            <div class="smallig">
+                <img class="smalligimg"
+                    src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/mind/check_small.png" />
+                <p class="col">
+                    Get professional guidance
+                </p>
+            </div>
+        </div>
+        <h3 style="text-align: center;">Select a pack</h3>
+        <div id="eighti">
+            <div class="ninei">
+                <div class="nineione">
+                    <p style="width: 55% ; margin-left: 15px;">12 sesssion valid for 12 months </p>
+                    <p style="text-decoration: line-through; color: #a2a2a2; display: flex;"> ₹ 12000</p>
+                </div>
+                <div class="nineitwo">
+
+                    <p style="color: #a2a2a2;  font-size: 14px;  ">Get extra 20% instant discount using card during
+                        payment</p>
+                </div>
+            </div>
+            <div class="ninei">
+                <div class="nineione">
+                    <p style="width: 55% ; margin-left: 15px; margin-bottom: 15px;">8 sesssion valid for 8 months</p>
+                    <p style="text-decoration: line-through; color: #a2a2a2; display: flex;"> ₹ 8000</p>
+
+                </div>
+                <div class="nineitwo">
+                    <p style="color: #a2a2a2;  font-size: 14px;  ">Get extra 20% instant discount using card during
+                        payment</p>
+                </div>
+            </div>
+            <div class="ninei">
+                <div class="nineione">
+                    <P style="width: 55% ; margin-left: 15px;">4 sesssion
+                        valid for 4 months</P>
+                    <p style="text-decoration: line-through; color: #a2a2a2;">
+                        ₹ 4000
+                    </p>
+                    <!--<span style="text-decoration: none; color: black;"> ₹ 3750</span> -->
+                </div>
+                <div class="nineitwo">
+                    <p style="color: #a2a2a2; font-size: 14px; ">Get extra 20% instant discount
+                        using
+                        card during
+                        payment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <img id="fivei"
+        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:150/dpr_2/image/vm/23f48c0c-8cca-46f7-bc49-5848459eb1df.png" />
+    <img id="sixi"
+        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1440:240/dpr_2/image/vm/8d058e84-f098-4129-b107-dc81c19af2f1.png" />
+    <img id="seveni"
+        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1440:240/dpr_2/image/vm/7f7af73c-3ee3-46c1-9129-0df18dbb02ac.png" />
+
+
+    <div id="faqi">
+        <p style="font-size: 30PX;margin-left: 100PX;">FAQ</p>
+        <p style="font-size: 20PX;margin-left: 100PX;line-height: 0PX;">7 QUESTIONS</p>
+        <div>
+            <button class="fabutton" style="margin-left: -249px;">• Is therapy for me?</button>
+            <i onclick="first()" style="margin-left: 500px;" class="fas fa-chevron-down"></i>
+            <p id="text1"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -120px;">• What should I expect during my first 1 on 1 therapy
+                session?</button>
+            <i onclick="second()" style="margin-left: 370px;" class="fas fa-chevron-down"></i>
+            <p id="text2"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -120px;">• What is the difference between a Therapist and a
+                Psychiatrist?</button>
+            <i onclick="third()" style="margin-left: 370px;" class="fas fa-chevron-down"></i>
+            <p id="text3"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -210px;">• What does a Therapy pack offer?</button>
+            <i onclick="four()" style="margin-left: 460px;" class="fas fa-chevron-down"></i>
+            <p id="text4"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -190px;">• How to book a 1 on 1 Therapy session?</button>
+            <i onclick="five()" style="margin-left: 440px;" class="fas fa-chevron-down"></i>
+            <p id="text5"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -170px;">• Who all will have access to my medical
+                data?</button>
+            <i onclick="six()" style="margin-left: 420px;" class="fas fa-chevron-down"></i>
+            <p id="text6"></p>
+            <hr class="fabuttonhh">
+        </div>
+
+        <div>
+            <button class="fabutton" style="margin-left: -30px;">• The information I share with my therapist is
+                sensitive information,is this information safe?</button>
+            <i onclick="seven()" style="margin-left: 92%;margin-top: -50px;" class="fas fa-chevron-down"></i>
+            <p id="text7"></p>
+            <hr class="fabuttonhh">
+        </div>
+    </div>
+
+    <!-------------------------------- footer part ------------------------------------->
+    <div id="Nikfooter">
+        <div id="footerd1">
+            <img id="footerd1I" src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="">
+            <p id="footerd1P">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy
+                with yoga & meditation, and
+                medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
+        </div>
+        <div id="footerd2">
+            <p style="margin-top: 10%;" class="nikContact">CONTACT US</p>
+            <p class="nikContact">BLOG</p>
+            <p class="nikContact">PARTNER.FIT</p>
+            <p class="nikContact">TALKS</p>
+            <P class="nikContact">CAREERS</P>
+        </div>
+        <div id="footerd3">
+            <p class="nikContact1">CULTFIT FOR BUSINESSES</p>
+            <p class="nikContact1">CULT FRANCHISE</p>
+            <p class="nikContact1">CULT PASS NETWORK</p>
+            <P class="nikContact1">CORPORATE PARTNERSHIPS</P>
+        </div>
+        <div id="footerd4"></div>
+
+        <!-- app store part -->
+        <div id="footerd4">
+            <a href="https://apps.apple.com/us/app/cure-fit/id1217794588">
+                <img style="margin-left: 25%;margin-top: 20%;" src="https://static.cure.fit/assets/images/app-store.svg"
+                    alt="">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=fit.cure.android">
+                <img style="margin-left: 25%;margin-top: 10%;"
+                    src="https://static.cure.fit/assets/images/play-store.svg" alt="">
+            </a>
+        </div>
+    </div>
+    <div style="display: flex;color: whitesmoke;margin-top: -50px;" id="smallContact">
+        <p style="margin-left: 5%;">CONTACT US</p>
+        <p style="margin-left: 5%;">FAQ</p>
+        <p style="margin-left: 5%;">Terms & conditions</p>
+        <p style="margin-left: 5%;">Privacy Policy</p>
+        <p style="margin-left: 5%;">Refund Policy</p>
+        <a href="https://www.facebook.com/cultfitofficial">
+            <img style="margin-left: 300px;margin-top: 20px;"
+                src="https://static.cure.fit/assets/images/facebook_icon_white.svg" alt="">
+        </a>
+        <a href="https://twitter.com/cultfitOfficial">
+            <img style="margin-left: 50px;margin-top: 20px;"
+                src="https://static.cure.fit/assets/images/twitter_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/cultfitOfficial/">
+            <img style="margin-left: 50px;margin-top: 20px;"
+                src="https://static.cure.fit/assets/images/instagram_icon_white.svg" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg">
+            <img style="margin-left: 50px;margin-top: 20px;"
+                src="https://static.cure.fit/assets/images/youtube_icon_white_1.svg" alt="">
+        </a>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var hours = Math.floor((distance % (1500 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("clock").innerHTML = hours + "h:"
+            + minutes + "m:" + seconds + "s";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("clock").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+
+    // currentTime();
+
+    function first() {
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text1").innerHTML = `<p>Everyone goes through challenging situations in life,
+             and while you may have successfully navigated through other difficulties you’ve faced, Therapy provides 
+             the extra support when you most need it. In fact, therapy is for people who have enough
+             self-awareness to realize they need a helping hand, and that is something to be admired.</p>
+             <h3>Do you find this helpful? YES   NO</h3>
+             `
+    }
+    function second() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text2").innerHTML = `<p>The first session is about building trust. Therapy works 
+            best when you can trust your Therapist and vice versa. We, therefore, use the first session to
+             understand your problems better and define a goal based journey on what to expect from therapy and by when.</p>
+             <h3>Do you find this helpful? YES   NO</h3>`
+    }
+    function third() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text3").innerHTML = `<p>A Therapists' goal is to help patients make decisions and clarify their feelings in order
+             to solve problems without any medication. A Psychiatrist, on the other hand, helps diagnose mental health issues, and prescribes medicines if needed. However, 
+            Therapists often works in tandem with a Psychiatrist to provide comprehensive care as needed by any user.</p>
+            <h3>Do you find this helpful? YES   NO</h3>`
+    }
+    function four() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text4").innerHTML = `<p>A Therapy pack helps with continuity of your wellness journey,
+             without having to bother about booking sessions one at a time. Your Therapist will recommend the number of sessions that you might need to address your challenges. 
+            We recommend you buy a pack only after a discussion with the therapist. </p>
+            <h3>Do you find this helpful? YES   NO</h3>`
+    }
+    function five() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text5").innerHTML = `<p>Here’s how you can book a therapy session from the cure.fit app: Log into the cure.fit app From the bottom
+             of the To-Do page, pick mind.fit Pick 1 on 1 therapy Pick a preferred center and time slot Make a payment That’s all!</p>
+             <h3>Do you find this helpful? YES   NO</h3>`
+    }
+    function six() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text7").innerHTML = "";
+        document.getElementById("text6").innerHTML = `<p>Only your assigned Therapist and/or assigned Psychiatrist will have access to your medical data until you provide
+             explicit access to any other professional</p>  <h3>Do you find this helpful? YES   NO</h3>`
+    } function seven() {
+        document.getElementById("text1").innerHTML = "";
+        document.getElementById("text2").innerHTML = "";
+        document.getElementById("text3").innerHTML = "";
+        document.getElementById("text4").innerHTML = "";
+        document.getElementById("text5").innerHTML = "";
+        document.getElementById("text6").innerHTML = "";
+        document.getElementById("text7").innerHTML = `<p>Absolutely! We ensure none of your medical/psychiatric information is shared with anyone but your
+             Therapist and Psychiatrist. All the information you share with us is completely safe and secure with us</p>
+             <h3>Do you find this helpful? YES   NO</h3>`
+    }
+
+    // <----------NavbarDropDown----------------->
+    var spet = document.getElementById("spet")
+    var toggle = false;
+    //  <-----------------Eatfit dropDown topleft------------------>
+    spet.addEventListener("click", function () {
+        var headDropDown = document.getElementById("headDropDown")
+        var droparrow = document.getElementById("dropdown-arrow")
+
+        if (toggle) {
+            headDropDown.style.display = "none"
+            toggle = false
+            droparrow.style.transform = "rotate(" + 180 + "deg)"
+        } else {
+            headDropDown.style.display = "flex"
+            toggle = true
+            droparrow.style.transform = "rotate(" + 0 + "deg)"
+        }
+
+    })
+
+    // <---------------------Cart Page------------------------>
+
+  
+    let cart=document.getElementById("cartNik")
+var toggle = false;
+ cart.addEventListener("click",function (){
+  console.log("clicked")
+     if(toggle){
+         toggle = false;
+          chiDiv.style.display = "none"
+     }else{
+         toggle = true;
+         chiDiv.style.display = "block"
+
+         var response = axios.get(`http://localhost:2345/cart/store`)
+          .then(function(response){
+              storedata =response.data;
+              myFuncN(storedata,"store")
+          }).catch(function (error) {
+              console.log(error);
+          })
+       
+          var response = axios.get(`http://localhost:2345/cart/eat`)
+          .then(function(response){
+              eatdata =response.data
+          }).catch(function (error) {
+              console.log(error);
+          })
+     }
+   
+ });
+</script>
+<script src="./cartpop.js"></script>

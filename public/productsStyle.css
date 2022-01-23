@@ -1,0 +1,47 @@
+        /* <-----------MenProd---------------> */
+        .category-title{
+            width: 80%;
+            margin: auto;
+            font-size: 25px;
+            margin-top: 25px;
+            font-weight: 700;
+            /* padding: 0 15px; */
+        }
+        #Products{
+            width: 80%;
+            margin: auto;
+            /* height:500px; */
+            display:flex;
+            flex-flow:row wrap;
+            justify-content: space-between;
+        }
+        #Products>#product{
+            width:32%;
+             padding-top:20px;
+             /* font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; */
+        }
+        #Products>#product>img{
+            width:100%;
+        }
+        #store,#title{
+            margin-bottom: 0px;
+        }
+        #store,#title,#price,#discount{
+           padding-left:5px;
+           margin-top:4px;
+        }
+        #title{
+            color: rgb(155, 155, 155);
+            font-size: 15px;
+        }
+        #price{
+            color: rgb(36, 36, 36);
+            font-family: BrandonTextWeb-Bold, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            display: inline-block;
+        }
+        #discount{
+            display: inline-block;
+            /* padding-left: 10px; */
+            color: rgb(255, 50, 120);
+            font-size: 13px;
+        }
