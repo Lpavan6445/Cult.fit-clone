@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon src/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run server --prefix client"
+    "server": "nodemon src/server.js"
+    // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run server --prefix client"
   },
   "repository": {
     "type": "git",
