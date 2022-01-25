@@ -59,7 +59,7 @@ app.use("/cart",cartController)
 
 // <--------------
 app.get("/",function(req,res){
-  res.sendFile(path.join(process.cwd()+`index.html`))
+  res.sendFile(path.join(process.cwd()+`/public/index.html`))
 })
 // app.get("/x",function(req,res){
     // res.send("d")
