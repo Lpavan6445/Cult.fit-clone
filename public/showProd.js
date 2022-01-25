@@ -4,7 +4,7 @@ async function getData(input,divsec){
     // var data = await response.json();
     // console.log(divsec,data.meals);
     // showProd(data.meals,divsec)
-    var response = await axios.get(`http://localhost:2345/meals/${input}`)
+    var response = await axios.get(`https://cult-fit-clone-w13.herokuapp.com/meals/${input}`)
     console.log(response.data);
     showProd(response.data,divsec)
   }
@@ -36,7 +36,7 @@ function showProd(mealsData,x){
               btn.addEventListener("click", function () {
                 console.log(meal._id)
               alert("Product added successfully")
-              var response = axios.post(`http://localhost:2345/cart/add`,{cartEataddedId:meal._id})
+              var response = axios.post(`https://cult-fit-clone-w13.herokuapp.com/cart/add`,{cartEataddedId:meal._id})
         
            })
             mealBottom.append(price,btn)

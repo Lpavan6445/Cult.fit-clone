@@ -1178,7 +1178,7 @@
     // console.log(cartData);
 
     // myFuncN(cartData)
-    var response = axios.get(`http://localhost:2345/cart/store`)
+    var response = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/store`)
                 .then(function(response){
                     storedata =response.data;
                     myFuncN(storedata)
@@ -1245,9 +1245,9 @@
             deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
             deleteProd.addEventListener("click", function (index) {
                 console.log(nik["_id"])
-                axios.delete(`http://localhost:2345/cart/store/${nik["_id"]}`)
+                axios.delete(`https://cult-fit-clone-w13.herokuapp.com/cart/store/${nik["_id"]}`)
                 .then(function(res){
-                    res = axios.get(`http://localhost:2345/cart/store`)
+                    res = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/store`)
                     .then(function (res) {
                         storedata =res.data
                         myFuncN(storedata,"store")
@@ -1409,7 +1409,7 @@
     }) 
     let paytm = document.getElementById("paytm")
     paytm.addEventListener("click",function(){
-        window.location.href="http://localhost:2345/paytm"
+        window.location.href="https://cult-fit-clone-w13.herokuapp.com/paytm"
     }) 
     var hamburger = document.getElementById("hamburgericon")
 hamburger.addEventListener("click",()=>{

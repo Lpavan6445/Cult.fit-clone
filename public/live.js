@@ -640,7 +640,7 @@ var toggle = false;
           toggle = true;
           chiDiv.style.display = "block"
 
-          var response = axios.get(`http://localhost:2345/cart/store`)
+          var response = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/store`)
            .then(function(response){
                storedata =response.data;
                myFuncN(storedata,"store")
@@ -648,7 +648,7 @@ var toggle = false;
                console.log(error);
            })
         
-           var response = axios.get(`http://localhost:2345/cart/eat`)
+           var response = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/eat`)
            .then(function(response){
                eatdata =response.data
            }).catch(function (error) {
@@ -782,9 +782,9 @@ divN.append(scrollN)
         deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
         deleteProd.addEventListener("click", function (index) {
            console.log(nik["_id"])
-           axios.delete(`http://localhost:2345/cart/store/${nik["_id"]}`)
+           axios.delete(`https://cult-fit-clone-w13.herokuapp.com/cart/store/${nik["_id"]}`)
            
-           var res = axios.get(`http://localhost:2345/cart/store`)
+           var res = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/store`)
            .then(function(res){
                storedata = res.data
               myFuncN(storedata,"store")
@@ -936,9 +936,9 @@ divN.append(scrollN)
         deleteProd.src = "https://static.cure.fit/assets/images/modal-close.svg"
         deleteProd.addEventListener("click", function (index) {
            console.log(nik["_id"])
-           axios.delete(`http://localhost:2345/cart/eat/${nik["_id"]}`)
+           axios.delete(`https://cult-fit-clone-w13.herokuapp.com/cart/eat/${nik["_id"]}`)
            
-           var res = axios.get(`http://localhost:2345/cart/eat`)
+           var res = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/eat`)
            .then(function(res){
                eatdata = res.data
               myFuncN(eatdata,"eat")

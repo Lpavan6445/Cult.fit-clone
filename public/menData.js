@@ -3,7 +3,7 @@ async function getData(input,divsec){
         // var data = await response.json();
         // console.log(divsec,data.meals);
         // showProd(data.meals,divsec)
-        var response = await axios.get(`http://localhost:2345/store/${input}`)
+        var response = await axios.get(`https://cult-fit-clone-w13.herokuapp.com/store/${input}`)
         console.log(response.data);
         showProd(response.data,divsec)
 }

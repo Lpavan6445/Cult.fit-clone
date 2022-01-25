@@ -1028,7 +1028,7 @@ var toggle = false;
          toggle = true;
          chiDiv.style.display = "block"
 
-         var response = axios.get(`http://localhost:2345/cart/store`)
+         var response = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/store`)
           .then(function(response){
               storedata =response.data;
               myFuncN(storedata,"store")
@@ -1036,7 +1036,7 @@ var toggle = false;
               console.log(error);
           })
        
-          var response = axios.get(`http://localhost:2345/cart/eat`)
+          var response = axios.get(`https://cult-fit-clone-w13.herokuapp.com/cart/eat`)
           .then(function(response){
               eatdata =response.data
           }).catch(function (error) {
