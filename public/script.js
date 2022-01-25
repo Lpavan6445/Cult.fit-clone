@@ -271,7 +271,7 @@ function openGmailModal() {
 
   googleBtnDiv.addEventListener("click",function () {
     console.log("clicking")
-      window.location.href = "https://cult-fit-clone-w13.herokuapp.com/"
+      window.location.href = "https://cult-fit-clone-w13.herokuapp.com/google"
   })
   let googleBtn = document.createElement("button");
   googleBtn.setAttribute("id", "googleBtn");
