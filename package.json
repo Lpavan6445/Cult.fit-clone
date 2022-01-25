@@ -15,7 +15,8 @@
   "bugs": {
     "url": "https://github.com/Lpavan6445/Cult.fitclone/issues"
   },
-  "homepage": "https://github.com/Lpavan6445/Cult.fitclone#readme",
+  "homepage": "https://cult-fit-clone-w13.herokuapp.com/",
+  "proxy":"https://cult-fit-clone-w13.herokuapp.com/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^14.2.0",

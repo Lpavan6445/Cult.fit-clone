@@ -58,9 +58,9 @@ app.use("/cart",cartController)
 // <---Below line will add current main directory +publiv so that we can get index.html by default---->
 
 // <--------------
-// app.get("/",function(req,res){
-//   res.sendFile(path.join(process.cwd()+`index.html`))
-// })
+app.get("/",function(req,res){
+  res.sendFile(path.join(process.cwd()+`index.html`))
+})
 // app.get("/x",function(req,res){
     // res.send("d")
     // res.render(path.join(process.cwd()+"/menProduct"))
