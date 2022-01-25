@@ -1,4 +1,4 @@
-
+// modal
 
 const panels = document.querySelectorAll(".panel");
 
