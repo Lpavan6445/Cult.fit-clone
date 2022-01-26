@@ -149,7 +149,7 @@
 #prodBrandN{
         color: rgb(0, 0, 0);
     font-size: 14px;
-    /* line-height: 150px; */
+    line-height: 30px;
     margin-top: 10px;
     font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     text-transform: uppercase;
@@ -158,7 +158,7 @@
 }
 #prodDes{
       font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
     margin-top: 2px;
     color: rgb(155, 155, 155);
     white-space: nowrap;
@@ -318,7 +318,7 @@
             #prodBrandN{
                     color: rgb(0, 0, 0);
                 font-size: 11px;
-                /* line-height: 150px; */
+                 line-height: 30px;
                 margin-top: 10px;
                 font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
                 text-transform: uppercase;
@@ -545,6 +545,9 @@
         #smallContact img{
             display: none;
         }
+        #faqi{
+            display: none
+        }
     } 
      @media screen and (min-width :481px) and (max-width : 900px){
                             /* NAVBAR DOWN PART CSS STARTS HERE */
@@ -557,7 +560,7 @@
             #prodBrandN{
                     color: rgb(0, 0, 0);
                 font-size: 11px;
-                /* line-height: 150px; */
+                line-height: 30px;
                 margin-top: 10px;
                 font-family: BrandonTextWeb-Medium, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
                 text-transform: uppercase;
@@ -781,7 +784,534 @@
             margin-top: 3px;
             width: 100%;
         }
+        #faqi{
+            display: none
+        }
     } 
+      /* Footer */
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #000;
+    padding: 50px 0 0 0;
+}
+
+
+.top-footer{
+    width: 80%;
+    padding: 0 0 40px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.top-footer .description {
+    width: 400px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a2a2a2;
+    font-family: 'BrandonTextWeb-Regular';
+    line-height: normal;
+}
+
+.contact-details {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+   display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  
+    margin-top: 0;
+}
+
+.contact-details a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'BrandonTextWeb-Regular';
+}
+
+.cult-fit-bussiness {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+   display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.cult-fit-bussiness a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'BrandonTextWeb-Regular';
+}
+
+
+.istore-play-btn {
+    margin-bottom: 20px;
+}
+
+.middle-footer {
+    margin: auto;
+    width: 80%;
+    color: rgb(162, 162, 162);
+    background-color: rgb(17, 18, 19);
+    padding: 30px 24px;
+}
+
+
+.middle-footer-related-search {
+    padding: 0px;
+    color: rgb(162, 162, 162);
+    border-bottom: 1px solid rgb(162, 162, 162);
+    margin-bottom: 2%;
+}
+
+.middle-footer-text-div {
+    color: rgb(162, 162, 162);
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle-footer-text {
+    padding: 0px 10px 0px 0px;
+}
+
+.middle-footer-text a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+.lower-footer-div {
+    width: 83%;
+    margin:auto;   
+    display: flex; 
+    /* justify-content: flex-start; */
+    align-items: center;
+    /* border: 1px solid #fff; */
+}
+
+.lower-footer-div-text-div {
+    width: 88%;
+    /* border: 1px solid #fff; */
+}
+
+
+.lower-footer-div-text {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+   
+    padding-left: 2%;
+}
+
+.lower-footer-div-text li {
+    list-style: none;
+   
+}
+
+.lower-footer-div-text a {
+    text-decoration: none;
+    color: #A4A4A4;
+    font-size: 12px;
+}
+
+.lower-footer-div-text a:hover {
+    color: #fff;
+}
+
+
+.lower-footer-social-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+.lower-footer-social-icons a {
+    font-size: 12px;
+    color: #a4a4a4;
+}
+
+.lower-footer-social-icons a img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+@media screen and (max-width: 480px) {  
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+  
+  
+  @media screen and (min-width: 480px) and (max-width : 720px){  
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+  
+  
+  @media screen and (min-width: 720px) and (max-width : 900px) {
+  .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .contact-details {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      display: inline;
+  }
+  
+  .cult-fit-bussiness {
+      width: 100%;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+  }
+  
+  .play-button {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .istore-play-btn img{
+      width: 92px;
+      height: 30px;
+  }
+  
+  .play-store-btn img {
+      width: 92px;
+      height: 30px;
+  }
+  
+  .description {
+      display: none;
+  }
+  
+  .middle-footer {
+      display: none;
+  }
+  
+  .lower-footer-div {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .lower-footer-div-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+  .lower-footer-social-icons {
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .lower-footer-social-icons img {
+      height: 22px;
+      width: 22px;
+  }
+  
+  }
+  
+       /* <------------SmallScreen NAvbar----------------> */
+#hamburgericon{
+    padding:10px;
+}
+#hamburgericon>div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    z-index: 1;
+}
+#smallScreenNav{
+    display: none;
+    position:sticky;
+    transition: all 1s ease 1s;
+}
+#dropdownNav{
+    display: none;
+    display:flex;
+    flex-direction: column;
+    width: 50vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(34, 34, 34);
+    padding-top: 30px;
+     max-width: 350px;
+     transition: all 1s ease 1s;
+}
+#cross>.fa-times{
+    color:white;
+    font-size: 38px;
+    position: absolute;
+    top:20px;
+    right: 30px;
+    
+}
+#cultlogodis>img{
+    width: 100px;
+    margin-bottom: 30px;
+    padding-left: 3px;
+}
+#navPages{
+    display:flex;
+    flex-direction:column;
+    color: white;
+
+} 
+#navPages>div{
+    width:100%;
+    /* text-align:center; */
+    padding: 20px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* border-top: 1px solid white; */
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+#navPages>div>a{
+    text-decoration: none;
+    color: white;
+}
+#downLogin{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    color: white;
+    
+}
+#downLogin>div{
+    width:100%;
+    text-transform: none;
+    /* padding: 20px 20px 20px 0px; */
+    font-size: 15px;
+    padding: 15px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    /* font-weight: bold; */
+    font-family: BrandonTextWeb-Regular,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: white;
+    max-width: 350px;
+    /* /* max-width: 350px; */
+}
+  /* <-----------MediaQueriesNavbar------------> */
+@media screen and (max-width:720px){
+    #innerNavbar{
+      width: 50%;
+      justify-content:center;
+      align-items:center;
+      margin-left: auto;
+    }
+    #innerNavbar>#logo{
+        /* justify-content:center; */
+    }
+    #location{
+        /* width: 30vw; */
+        margin-right:0px;
+       margin-left: 100%;
+    }
+    #diff-pages,#location,#open,#spet,#order,#profile,#spet,#eatSubpages,#logged-out,#blue-dot,#cartNik{
+        display:none;
+    }
+    #footerd4 img{
+        width:5%;
+    }
+    #eatheader{
+        width:80%;
+    }
+    #smallScreenNav{
+        display: block;
+    }
+    #dropdownNav{
+        display:none;
+    }
+  }
 </style>
 <body>
     <!----LoadingAnimation---->
@@ -1150,7 +1680,7 @@
         <div  style="display: flex;margin-left: 5%;width: 90%;">
             <div id="loved" style="width: 20%;">
                 <img width="100%" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,c_fill/dpr_2/cultgear-content/DyZfNpLyBJmr1PJ1z1JVBLye" alt="">
-                <div style="line-height: 1px;">
+                <div style="line-height: 10px;">
                     <p id="prodBrandN">CULTSPORT</p>
                     <p id="prodDes">Vitals Panel Sports Joggers</p>
                     <span id="prodBrandN">₹ 1199</span><span id="cut" style="text-decoration: line-through;margin-right: 10px;">₹ 1999</span><span id="cut" style="color: rgb(255, 50, 120);;">40% OFF</span>
@@ -1297,43 +1827,249 @@
                 <hr class="fabuttonhh">
             </div>
         </div>
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <div class="top-footer">
+                <div class="image-description">
+                    <img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="cult logo" width="126px"
+                        height="42px">
+                    <div class="description">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness
+                        easy with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay</div>
+                </div>
+                <ul id="contact-details" class="contact-details">
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">PARTNER.FIT</a></li>
+                    <li><a href="#">TALKS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                </ul>
         
-        <!-------------------------------- footer part ------------------------------------->
-        <div id="Nikfooter">
-            <div id="footerd1">
-                <img id="footerd1I" src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="">
-                <p id="footerd1P">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with
-                    yoga & meditation, and
-                    medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
-            </div>
-            <div id="footerd2">
-                <p style="margin-top: 10%;" class="nikContact">CONTACT US</p>
-                <p class="nikContact">BLOG</p>
-                <p class="nikContact">PARTNER.FIT</p>
-                <p class="nikContact">TALKS</p>
-                <P class="nikContact">CAREERS</P>
-            </div>
-            <div id="footerd3">
-                <p class="nikContact1">CULTFIT FOR BUSINESSES</p>
-                <p class="nikContact1">CULT FRANCHISE</p>
-                <p class="nikContact1">CULT PASS NETWORK</p>
-                <P class="nikContact1">CORPORATE PARTNERSHIPS</P>
-            </div>
-            <div id="footerd4"></div>
+                <ul class="cult-fit-bussiness">
+                    <li><a href="#"> CULTFIT FOR BUSINESSES</a></li>
+                    <li><a href="#">CULT FRANCHISE</a></li>
+                    <li><a href="#">CULT PASS NETWORK</a></li>
+                    <li><a href="#">CORPORATE PARTNERSHIPS</a></li>
         
-            <!-- app store part -->
-            
+                </ul>
+                <div class="play-button">
+                    <div class="istore-play-btn">
+                        <img src="https://static.cure.fit/assets/images/app-store.svg" alt="istore btn" width="133px"
+                            height="42px">
+                    </div>
+                    <div class="play-store-btn">
+                        <img src="https://static.cure.fit/assets/images/play-store.svg" alt="google play btn" width="133px"
+                            height="42px">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="middle-footer">
+                <div class="middle-footer-related-search">RELATED SEARCHES</div>
+                <div class="middle-footer-text-div">
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Gym Near Me</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Consult Nutritionist Online</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Exercise To Reduce Belly Fat</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Meditation Music</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Dermatologist online</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Chennai</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Coimbatore</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Mobility Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Core Exercise</a>
+                        </div>
+                    </div>
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Online Personal Training</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Consult Gynocologist Online</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Six Pack Workout</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Pranayam</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Orthopedist doctor near me</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Jaipur</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Bangalore</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Kids Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Butt Exercise</a>
+                        </div>
+                    </div>
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Online Doctor Consultation</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Diagonistc Tests</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Yoga Postures for Begginer</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Bedtime Stories For Kids</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Mumbai</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Kolkata</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Home Workouts</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Dance Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Arm workout</a>
+                        </div>
+                    </div>
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Therapist consultation</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Food Near Me</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Surya Namaskar for Begginers</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Meditation in Hindi</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Delhi</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Ahmedabad</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Belly fat Loss Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">How To Lose Weight</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Back Exercise</a>
+                        </div>
+                    </div>
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Online Fitness Classes</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Healthy Receipes</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Yoga for Strss Relief</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Mindfullness Meditation</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Pune</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Chandigarh</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Weight Loss Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">HIIT Workout</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Abs Workout</a>
+                        </div>
+                    </div>
+                    <div class="middle-footer-text-inner-div">
+                        <div class="middle-footer-text">
+                            <a href="#">Consult Cardiologist Online</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Chest Exercise</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Yoga Asanas</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Yoga Nidra</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Hyderbad</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Gyms in Indore</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Strength Training</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Exercise for Toned Body</a>
+                        </div>
+                        <div class="middle-footer-text">
+                            <a href="#">Thigh Exercise</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="lower-footer-div" class="lower-footer-div">
+                <div class="lower-footer-div-text-div">
+                    <ul class="lower-footer-div-text">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="lower-footer-social-icons">
+                    <a href="#">
+                        <img src="https://static.cure.fit/assets/images/facebook_icon_white.svg" alt="facebook icon">
+                    </a>
+                    <a href="#">
+                        <img src="https://static.cure.fit/assets/images/twitter_icon_white.svg" alt="Twitter Icon">
+                    </a>
+                    <a href="#">
+                        <img src="https://static.cure.fit/assets/images/instagram_icon_white.svg" alt="Instagram icon">
+                    </a>
+                    <a href="#">
+                        <img src="https://static.cure.fit/assets/images/youtube_icon_white_1.svg" alt="Youtube icon">
+                    </a>
+                </div>
+            </div>
+        
         </div>
-        <div style="display: flex;color: whitesmoke;margin-top: -50px;" id="smallContact">
-            <p style="margin-left: 5%;">CONTACT US</p>
-            <p style="margin-left: 5%;">FAQ</p>
-            <p style="margin-left: 5%;">Terms & conditions</p>
-            <p style="margin-left: 5%;">Privacy Policy</p>
-            <p style="margin-left: 5%;">Refund Policy</p>
-            
-        </div>
-        </div>
-    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
