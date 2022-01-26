@@ -442,6 +442,10 @@ color: #9b9b9b;
     max-width: 350px;
     /* /* max-width: 350px; */
 }
+#downLogin>div>a{
+    text-decoration: none;
+    color: white;
+}
   /* <-----------MediaQueriesNavbar------------> */
 @media screen and (max-width:720px){
     #innerNavbar{
@@ -476,79 +480,393 @@ color: #9b9b9b;
 
   }
 
-/* <--------------FooterStyle--------------------------------------> */
-#Nikfooter{
-    background-color: black;
+  /* <----------------------FooterStyle--------------------> */
+
+#footer {
+    position: relative;
     width: 100%;
-    height: 350px;
+    height: fit-content;
+    background-color: #000;
+    padding: 50px 0 0 0;
+}
+
+
+.top-footer{
+    width: 80%;
+    padding: 0 0 40px 0;
+    margin: 0 auto;
     display: flex;
-    /* display:none; */
-    overflow: hidden;
+    justify-content: space-between;
+  
 }
-#footerd1{
-    width: 37%;
-    height: 100%;
-}
-#footerd1I{
-    width: 30%;
-    margin-left: 20%;
-    margin-top: 10%;
-}
- #footerd1P{
-     margin-left: 17%;
-     margin-top: 5%;
-   font-size: 16px;
-   font-weight: 500;
-   font-style: normal;
-   font-stretch: normal;
-   line-height: normal;
-   letter-spacing: normal;
-   color: #a2a2a2;
- }
-  #footerd2{
-    width: 20%;
-    height: 100%;
-    font-size: 16px;
+
+.top-footer .description {
+    width: 400px;
+    margin-top: 20px;
+    font-size: 14px;
     font-weight: 500;
     font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
     color: #a2a2a2;
+    font-family: 'BrandonTextWeb-Regular';
+    line-height: normal;
 }
-.nikContact{
-   /* color: white; */
-   font-size: 18px;
-   font-weight: 500;
-   font-style: normal;
-   font-stretch: normal;
-   line-height: 1.94;
-   letter-spacing: normal;
-   list-style: none;
-   margin-left: 20%;
+
+.contact-details {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+   display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  
+    margin-top: 0;
 }
- #footerd3{
-    width: 20%;
-    height: 100%;
+
+.contact-details a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'BrandonTextWeb-Regular';
 }
- #footerd4{
-    /* width: 20%; */
-    height: 100%;
+
+.cult-fit-bussiness {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.94;
+    letter-spacing: normal;
+    list-style: none;
+   display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
-.nikContact1{
-    color: #a2a2a2;
-   font-size: 17px;
-   font-weight: 500;
-   font-style: normal;
-   font-stretch: normal;
-   line-height: 1.94;
-   letter-spacing: normal;
-   list-style: none;
-   margin-left: 15%;
+
+.cult-fit-bussiness a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'BrandonTextWeb-Regular';
+}
+
+
+.istore-play-btn {
+    margin-bottom: 20px;
+}
+
+.middle-footer {
+    margin: auto;
+    width: 80%;
+    color: rgb(162, 162, 162);
+    background-color: rgb(17, 18, 19);
+    padding: 30px 24px;
+}
+
+
+.middle-footer-related-search {
+    padding: 0px;
+    color: rgb(162, 162, 162);
+    border-bottom: 1px solid rgb(162, 162, 162);
+    margin-bottom: 2%;
+}
+
+.middle-footer-text-div {
+    color: rgb(162, 162, 162);
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle-footer-text {
+    padding: 0px 10px 0px 0px;
+}
+
+.middle-footer-text a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+.lower-footer-div {
+    width: 83%;
+    margin:auto;   
+    display: flex; 
+    /* justify-content: flex-start; */
+    align-items: center;
+    /* border: 1px solid #fff; */
+}
+
+.lower-footer-div-text-div {
+    width: 88%;
+    /* border: 1px solid #fff; */
+}
+
+
+.lower-footer-div-text {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+   
+    padding-left: 2%;
+}
+
+.lower-footer-div-text li {
+    list-style: none;
    
 }
-.nikContact1:nth-child(1){
-    margin-top: 5%;
+
+.lower-footer-div-text a {
+    text-decoration: none;
+    color: #A4A4A4;
+    font-size: 12px;
 }
-@media screen and (max-width:664px){
-    #footerd3{
-       display: none;
+
+.lower-footer-div-text a:hover {
+    color: #fff;
+}
+
+
+.lower-footer-social-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.lower-footer-social-icons a {
+    font-size: 12px;
+    color: #a4a4a4;
+}
+
+.lower-footer-social-icons a img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+@media screen and (max-width: 480px) {
+    .top-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .contact-details {
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+        display: inline;
+    }
+
+    .cult-fit-bussiness {
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    .play-button {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .istore-play-btn img{
+        width: 92px;
+        height: 30px;
+    }
+
+    .play-store-btn img {
+        width: 92px;
+        height: 30px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .middle-footer {
+        display: none;
+    }
+
+    .lower-footer-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .lower-footer-div-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .lower-footer-social-icons {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .lower-footer-social-icons img {
+        height: 22px;
+        width: 22px;
     }
 }
+
+@media screen and (min-width: 480px) and (max-width : 720px){
+.top-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contact-details {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    display: inline;
+}
+
+.cult-fit-bussiness {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+.play-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.istore-play-btn img{
+    width: 92px;
+    height: 30px;
+}
+
+.play-store-btn img {
+    width: 92px;
+    height: 30px;
+}
+
+.description {
+    display: none;
+}
+
+.middle-footer {
+    display: none;
+}
+
+.lower-footer-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.lower-footer-div-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.lower-footer-social-icons {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.lower-footer-social-icons img {
+    height: 22px;
+    width: 22px;
+}
+}
+@media screen and (min-width: 720px) and (max-width : 900px) {
+    .top-footer {
+         display: flex;
+         flex-direction: column;
+         align-items: stretch;
+     }
+     
+     .contact-details {
+         width: 100%;
+         font-size: 13px;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding-left: 0;
+         display: inline;
+     }
+     
+     .cult-fit-bussiness {
+         width: 100%;
+         font-size: 13px;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding-left: 0;
+     }
+     
+     .play-button {
+         display: flex;
+         justify-content: space-between;
+     }
+     
+     .istore-play-btn img{
+         width: 92px;
+         height: 30px;
+     }
+     
+     .play-store-btn img {
+         width: 92px;
+         height: 30px;
+     }
+     
+     .description {
+         display: none;
+     }
+     
+     .middle-footer {
+         display: none;
+     }
+     
+     .lower-footer-div {
+         display: flex;
+         flex-direction: row;
+     }
+     
+     .lower-footer-div-text {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         
+     }
+     
+     .lower-footer-social-icons {
+         display: flex;
+         flex-direction: column;
+        
+     }
+     
+     .lower-footer-social-icons img {
+         height: 22px;
+         width: 22px;
+     }
+     
+     } 

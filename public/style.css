@@ -2935,6 +2935,10 @@ h3{
     max-width: 350px;
     /* /* max-width: 350px; */
 }
+#downLogin>div>a{
+    text-decoration: none;
+    color: white;
+}
   /* <-----------MediaQueriesNavbar------------> */
 @media screen and (max-width:720px){
     #innerNavbar{

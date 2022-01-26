@@ -24,8 +24,8 @@ function navbar(){
        </div>
        <div id="downLogin">
           <div>SignIn</div>
-          <div>Cart</div>
-          <div>LogOut</div>
+          <div><a href="/cartpage.html">Cart</a></div>
+          <div><a href="/index.html">LogOut</a></div>
      </div>
   </div>
 </div>
@@ -163,36 +163,241 @@ function navbar(){
 </div>`
 }
 function footer(){
-  return ` <div id="Nikfooter">
-  <div id="footerd1">
-      <img id="footerd1I" src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="">
-      <p id="footerd1P">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, and
-   medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
-   </div>
-  <div id="footerd2">
-      <p style="margin-top: 10%;" class="nikContact">CONTACT US</p>
-      <p class="nikContact">BLOG</p>
-      <p class="nikContact">PARTNER.FIT</p>
-      <p class="nikContact">TALKS</p>
-      <P class="nikContact">CAREERS</P>
-  </div>
-  <div id="footerd3">
-       <p class="nikContact1">CULTFIT FOR BUSINESSES</p>
-       <p class="nikContact1">CULT FRANCHISE</p>
-       <p class="nikContact1">CULT PASS NETWORK</p>
-       <P class="nikContact1">CORPORATE PARTNERSHIPS</P>
-  </div>
-  <div id="footerd4"></div>
+  return `
+  <div class="top-footer">
+    <div class="image-description">
+      <img src="https://static.cure.fit/assets/images/cult-logo-white.svg" alt="cult logo" width="126px" height="42px">
+      <div class="description">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, and medical & lifestyle care hassle-free. #BeBetterEveryDay</div>
+    </div>
+    <ul id="contact-details" class="contact-details">
+      <li><a href="#">CONTACT US</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">PARTNER.FIT</a></li>
+      <li><a href="#">TALKS</a></li>
+      <li><a href="#">CAREERS</a></li>
+    </ul>
 
-  <!-- app store part -->
-  <div id="footerd4">
-           <a href="https://apps.apple.com/us/app/cure-fit/id1217794588">
-               <img style="margin-left: 25%;margin-top: 20%;" src="https://static.cure.fit/assets/images/app-store.svg" alt="">
-           </a>
-           <a href="https://play.google.com/store/apps/details?id=fit.cure.android">
-               <img style="margin-left: 25%;margin-top: 10%;" src="https://static.cure.fit/assets/images/play-store.svg" alt="">
-           </a>
+    <ul class="cult-fit-bussiness">
+      <li><a href="#"> CULTFIT FOR BUSINESSES</a></li>
+      <li><a href="#">CULT FRANCHISE</a></li>
+      <li><a href="#">CULT PASS NETWORK</a></li>
+      <li><a href="#">CORPORATE PARTNERSHIPS</a></li>
+    
+    </ul>
+    <div class="play-button">
+      <div class="istore-play-btn">
+        <img src="https://static.cure.fit/assets/images/app-store.svg" alt="istore btn" width="133px" height="42px">
+      </div>
+      <div class="play-store-btn">
+        <img src="https://static.cure.fit/assets/images/play-store.svg" alt="google play btn" width="133px" height="42px">
+      </div>
+    </div>
   </div>
-</div>`
+
+  <div class="middle-footer">
+    <div class="middle-footer-related-search">RELATED SEARCHES</div>
+    <div class="middle-footer-text-div">
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Gym Near Me</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Consult Nutritionist Online</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Exercise To Reduce Belly Fat</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Meditation Music</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Dermatologist online</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Chennai</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Coimbatore</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Mobility Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Core Exercise</a>
+        </div>
+      </div>
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Online Personal Training</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Consult Gynocologist Online</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Six Pack Workout</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Pranayam</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Orthopedist doctor near me</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Jaipur</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Bangalore</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Kids Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Butt Exercise</a>
+        </div>
+      </div>
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Online Doctor Consultation</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Diagonistc Tests</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Yoga Postures for Begginer</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Bedtime Stories For Kids</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Mumbai</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Kolkata</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Home Workouts</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Dance Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Arm workout</a>
+        </div>
+      </div>
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Therapist consultation</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Food Near Me</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Surya Namaskar for Begginers</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Meditation in Hindi</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Delhi</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Ahmedabad</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Belly fat Loss Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">How To Lose Weight</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Back Exercise</a>
+        </div>
+      </div>
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Online Fitness Classes</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Healthy Receipes</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Yoga for Strss Relief</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Mindfullness Meditation</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Pune</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Chandigarh</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Weight Loss Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">HIIT Workout</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Abs Workout</a>
+        </div>
+      </div>
+      <div class="middle-footer-text-inner-div">
+        <div class="middle-footer-text">
+          <a href="#">Consult Cardiologist Online</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Chest Exercise</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Yoga Asanas</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Yoga Nidra</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Hyderbad</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Gyms in Indore</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Strength Training</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Exercise for Toned Body</a>
+        </div>
+        <div class="middle-footer-text">
+          <a href="#">Thigh Exercise</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lower-footer-div" class="lower-footer-div">
+    <div class="lower-footer-div-text-div">
+      <ul class="lower-footer-div-text">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="lower-footer-social-icons">
+      <a href="#">
+        <img src="https://static.cure.fit/assets/images/facebook_icon_white.svg" alt="facebook icon">
+      </a>
+      <a href="#">
+        <img src="https://static.cure.fit/assets/images/twitter_icon_white.svg" alt="Twitter Icon">
+      </a>
+      <a href="#">
+        <img src="https://static.cure.fit/assets/images/instagram_icon_white.svg" alt="Instagram icon">
+      </a>
+      <a href="#">
+        <img src="https://static.cure.fit/assets/images/youtube_icon_white_1.svg" alt="Youtube icon">
+      </a>
+    </div>
+  </div>`
 }
 export {navbar,footer}
