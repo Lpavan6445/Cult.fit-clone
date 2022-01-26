@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navFooterStyle2.css">
-    <title>Product Details</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" href="https://static.cure.fit/assets/images/favicon-modified.png" type="image/x-icon">
+    <title>Product Details</title>
     <style>
         body{
             padding:0px; 
@@ -598,6 +599,21 @@
             import { navbar, footer } from "./navFoot.js"
             var nav = document.getElementById("navbar")
             nav.innerHTML = navbar()
+
+            var hamburger = document.getElementById("hamburgericon")
+            hamburger.addEventListener("click",()=>{
+                var dropNav = document.getElementById("dropdownNav")
+                dropNav.style.display="flex"
+                
+                console.log("clicking")
+            })
+            var cross = document.getElementById("cross")
+            cross.addEventListener("click",()=>{
+                var dropNav = document.getElementById("dropdownNav")
+                dropNav.style.display="none"
+                
+                console.log("clicking")
+            })
             var spet = document.getElementById("spet")
             var toggle = false;
             spet.addEventListener("click", function () {
