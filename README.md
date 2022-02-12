@@ -9,10 +9,6 @@ At cult.fit, we strive to keep you fit & healthy through a range of holistic off
 https://cult-fit-clone-w13.herokuapp.com/
  
 
-# Video link:
- #### we have shared a demo presentation of this project "clone-lybrate".
-https://drive.google.com/file/d/1aK1KYeHhtNz4fKeeObu4ha4KxJqJkBVB/view
-
 # Technology We Used :computer:
 > Tech Stack in Frontend:
 1. HTML5
