@@ -32,6 +32,9 @@ https://cult-fit-clone-w13.herokuapp.com/
 
 4. Get information of any disease or health issue along with preferred doctors.
 
+![cultfit](https://user-images.githubusercontent.com/87552836/154543917-e5fc509b-76d9-4b8e-afbc-b3ea1fa2fa7c.png)
+
+
 
 
 
@@ -39,6 +42,8 @@ https://cult-fit-clone-w13.herokuapp.com/
 
 
 ### Login and Sign up Page:
+
+
 User need to login before purchasing products from “cult.fit”. If user's are existing user they can login and if they are not existing user then they can register using sign up.
 
 
