@@ -1,6 +1,6 @@
-# Cult.fit-clone
+# Cult.fit-clone 
 #### About Cult.fit-clone
-At cult.fit, we strive to keep you fit & healthy through a range of holistic offerings that include fitness and yoga, healthy meals, mental wellbeing and primary care. Now anyone can now stay healthy from the safety of their homes with just a single app that helps you to #BeBetterEveryDay
+At cult.fit, we strive to keep you fit & healthy through a range of holistic offerings that include fitness and yoga, healthy meals, mental wellbeing and primary care. Now anyone can now stay healthy from the safety of their homes with just a single app that helps you to # BeBetterEveryDay
 
 > In this project we have tried to enhance the cloning of “Cult.fit” website using backend with validations, authentications and much more. We had build up all our efforts to do our best in this project. As, the Masai School's Mentorship  was specifically to build up our skills and we also accordingly implemented all that teachings in our project to look it at its best.
 > At  “Cult.fit”, we strive to keep you fit & healthy through a range of holistic offerings that include online consulting with doctors for any health issue. Now anyone can now stay healthy from the safety of their homes with just a single app that Not only does Cult.fit give you access to online medical professionals, we also have regular blogs from respected experts that give you tips and advice on health and well being.
